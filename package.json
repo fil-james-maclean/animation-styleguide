@@ -1,0 +1,18 @@
+{
+  "name": "animation-styleguide",
+  "version": "1.0.0",
+  "description": "A library of UI animations and how to use them in FIL digital interfaces.",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "James Maclean",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.0.0"
+  }
+}
