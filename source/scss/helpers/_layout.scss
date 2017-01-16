@@ -1,0 +1,110 @@
+.block {
+    display: block;
+    width: 100%;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline-block--top {
+    vertical-align: top;
+}
+
+.inline-block--middle {
+    vertical-align: middle;
+}
+
+.inline-block--bottom {
+    vertical-align: bottom;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+
+
+
+/*
+ * Using overflow 'hack' for a fixed + fluid column layout.
+ *
+ * 1. Resume normal flow outside of this element.
+ * 2. Float the fixed element. The fixed element must come first in the source.
+ * 3. Add the default gutter between the two elements
+ * 4. The magic to stop content wrapping around the floated element.
+ */
+%fixed-fluid,
+.fixed-fluid {
+    display: block; /* [1] */
+
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+    .fixed-fluid__fixed {
+        display: block;
+        float: left; /* [2] */
+    }
+
+    .fixed-fluid__fluid {
+        padding-left: gutter( 1 ); /* [3] */
+        overflow: auto; /* [4] */
+    }
+
+
+%fixed-fluid--rtl,
+.fixed-fluid--rtl {
+
+    > .fixed-fluid__fixed {
+        float: right;
+    }
+
+    > .fixed-fluid__fluid {
+        padding-right: gutter( 1 );
+        padding-left: 0;
+    }
+}
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
