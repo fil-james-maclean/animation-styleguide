@@ -1,1 +1,131 @@
 
+/**
+ * @extended as a default into animations
+ */
+.anim-fill-both {
+  animation-fill-mode: both;
+}
+
+/**
+ * timings
+ * easings
+ * bases
+ * entrance
+ * exit
+ * emphasis
+ * execute
+ */
+/**
+ * Animation Timings classes
+ * Start with these, timings and deviate to fine tune.
+ */
+
+ /**
+  * Minimal set of 8 should cover most UI animations
+  */
+//  $timings: (
+//   200,
+//   300,
+//   500,
+//   700,
+//  1000,
+//  1500,
+//  2000,
+//  4000,
+// );
+//
+// @each $speed in $timings {
+//      .duration-#{$speed} {
+//          animation-duration: #{$speed}ms ;
+//      }
+//  }
+
+/**
+ * Extended set for fine tuning and bespoke animations.
+ */
+@for $i from 1 through 40 {
+
+   .anim-delay-#{ $i * 100 } {
+       animation-delay: #{ $i * 100 }ms;
+   }
+   //
+  //  .anim-delay:nth-of-type( #{ $i } ) {
+  //      animation-delay: #{ $i * 200 }ms;
+  //  }
+
+   .anim--dur-#{ $i * 100 } {
+       animation-duration: #{ $i * 100 }ms;
+   }
+
+}
+
+
+/**
+ * Easings
+ *
+ */
+
+ $easein-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+ $easeout-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+ $easein-back: cubic-bezier(.57, .07, .6, 1.71);
+ $easeout-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+ .entrance {
+   animation-timing-function: $easeout-quad;
+ }
+ .exit {
+   animation-timing-function: $easein-quad;
+ }
+ .emphasis {
+   animation-timing-function: $easeout-back;
+ }
+ .execute {
+   animation-timing-function: $easein-back;
+ }
+
+/**
+* Entrances
+* fadein
+* fadein-scaleup
+* fadein-moveup-scaleup
+
+* fadein-moveleft
+* fadein-moveright
+
+* flipup-90
+* flipdown-90
+* flipleft-180
+
+
+* Exits
+* fadeout
+* fadeout-scaledown
+* fadeout-movedown-scaledown
+* fadeout-moveup-scaleup (moved the UI towards the user past the screen, avoid?)
+
+* fadeout-moveleft
+* fadeout-moveright
+
+* flipup-90
+* flipdown-90
+
+* flipdown-180
+
+* flipright-180
+
+* Emphasis
+* pulse-scale
+* pulse-outline
+* light-flare
+* spotlight
+* flipdown-180
+* flipleft-180
+* flipright-180
+
+* Execute
+* move ( best left to JS animations )
+* height ( best left to JS animations )
+* buy-cta
+* flash-secondary
+* flash-primay
+*/

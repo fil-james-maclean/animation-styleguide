@@ -1,0 +1,71 @@
+
+@each $header, $head-spec in $header-sizes-custom-small {
+
+    $font-size: nth( $head-spec, 1 );
+    $line-height: nth( $head-spec, 2 );
+    $font-weight: nth( $head-spec, 3 );
+
+    #{ $header }, .#{ $header } {
+        font-family: $body-font-family;
+        font-size: #{ $font-size }px;
+        line-height: #{ $line-height }px;
+        font-weight: #{ $font-weight };
+    }
+
+}
+
+@media (min-width:$breakpoint-medium) {
+
+    @each $header, $head-spec in $header-sizes-custom-medium {
+
+        $font-size: nth( $head-spec, 1 );
+        $line-height: nth( $head-spec, 2 );
+        $font-weight: nth( $head-spec, 3 );
+
+        #{ $header }, .#{ $header } {
+            font-family: $body-font-family;
+            font-size: #{ $font-size }px;
+            line-height: #{ $line-height }px;
+            font-weight: #{ $font-weight };
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+.p {
+    font-size: $base-font-size; line-height: $base-line-height;
+}
+
+.text-line-1 {
+    line-height: 1;
+}
+
+
+/**
+ *
+ */
+.large {
+    font-size: 26px; line-height: 40px;
+    font-weight: 300;
+}
+
+.xsmall {
+    font-family: $web-safe-font;
+    font-size: 12px; line-height: 20px;
+}
+
+.small {
+    // font-family: $web-safe-font;
+    font-size: 12px; line-height: 20px;
+}
+
+.disclaimer {
+    font-size: 14px; line-height: 22px;
+}
