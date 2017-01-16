@@ -50,7 +50,7 @@ gulp.task('serve', function() {
 gulp.task('watch', function (){
     gulp.watch('source/scss/**/*.scss', ['sass']);
     // Reloads the browser whenever HTML or JS files change
-    gulp.watch('source/templates/*.html', ['html']);
+    gulp.watch('source/templates/**/*.html', ['html']);
     gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
