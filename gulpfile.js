@@ -36,23 +36,29 @@ gulp.task('serve', function() {
     })
 });
 
-// gulp.task('vendor-js', function(){
-//     return gulp.src([
-//         'bower_components/jquery/dist/jquery.min.js',
-//         'bower_components/protonet/jquery.inview/jquery.inview.min.js',
-//         'bower_components/gsap/src/minified/TweenMax.min.js',
-//         'bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js'
-//     ])
-//     .pipe( concat( 'vendor.js' ) )
-//     .pipe( gulp.dest( 'app/js' ) );
-// });
+gulp.task('vendor-js', function(){
+    return gulp.src([
+        'bower_components/jquery/dist/jquery.min.js',
+        // 'bower_components/protonet/jquery.inview/jquery.inview.min.js',
+        // 'bower_components/gsap/src/minified/TweenMax.min.js',
+        // 'bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js'
+    ])
+    .pipe( concat( 'vendor.js' ) )
+    .pipe( gulp.dest( 'app/js' ) );
+});
+
+gulp.task('custom-js', function(){
+    return gulp.src( 'source/js/**/*.js' )
+    .pipe( concat( 'custom.js' ) )
+    .pipe( gulp.dest( 'app/js' ) );
+});
 
 gulp.task('watch', function (){
     gulp.watch('source/scss/**/*.scss', ['sass']);
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('source/templates/**/*.html', ['html']);
-    gulp.watch('app/js/**/*.js', browserSync.reload);
+    gulp.watch('source/js/**/*.js', browserSync.reload);
 });
 
 
-gulp.task('default', ['sass', 'html', 'watch', 'serve']);
+gulp.task('default', ['sass', 'html', 'vendor-js', 'custom-js','watch', 'serve']);
