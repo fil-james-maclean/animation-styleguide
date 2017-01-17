@@ -5,7 +5,7 @@
 .anim-fill-both {
   animation-fill-mode: both;
 }
-
+$animation-perspective: 800px;
 /**
  * timings
  * easings
@@ -65,25 +65,25 @@
  *
  */
 
- $easein-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
- $easeout-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
- $easein-back: cubic-bezier(.57, .07, .6, 1.71);
- // $easeout-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easein-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeout-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easein-back: cubic-bezier(.57, .07, .6, 1.71);
+// $easeout-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 //custom
- $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
+$easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 
- .entrance {
-   animation-timing-function: $easeout-quad;
- }
- .exit {
-   animation-timing-function: $easein-quad;
- }
- .emphasis {
-   animation-timing-function: $easeout-back;
- }
- .execute {
-   animation-timing-function: $easein-back;
- }
+.entrance {
+ animation-timing-function: $easeout-quad;
+}
+.exit {
+ animation-timing-function: $easein-quad;
+}
+.emphasis {
+ animation-timing-function: $easeout-back;
+}
+.execute {
+ animation-timing-function: $easein-back;
+}
 
 
 
@@ -166,9 +166,61 @@
   animation-timing-function: $easeout-back;
 }
 
+@keyframes fil-ani-FlipUp90  {
+  from {
+    // transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective($animation-perspective) translateY( 40% ) rotateX( -90deg );
+    opacity: 0;
+  }
+
+
+  to {
+    // transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+    transform: perspective($animation-perspective) translateY( 0 ) rotateX( 0deg );
+    opacity: 1;
+  }
+}
+.fil-ani-parent-perspective {
+  perspective: $animation-perspective;
+}
+.fil-ani-FlipUp90 {
+  backface-visibility: hidden !important;
+  animation-name: fil-ani-FlipUp90 ;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+
+@keyframes fil-ani-FlipDown90  {
+  from {
+    // transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective($animation-perspective) translateY( -40% ) rotateX( 90deg );
+    opacity: 0;
+  }
+
+
+  to {
+    // transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+    transform: perspective($animation-perspective) translateY( 0 ) rotateX( 0deg );
+    opacity: 1;
+  }
+}
+.fil-ani-parent-perspective {
+  perspective: $animation-perspective;
+}
+.fil-ani-FlipDown90 {
+  backface-visibility: hidden !important;
+  animation-name: fil-ani-FlipDown90 ;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  &.reverse {
+    animation-direction: reverse;
+  }
+}
+
+
 /**
 
-* fadein-moveright
 
 * flipup-90
 * flipdown-90

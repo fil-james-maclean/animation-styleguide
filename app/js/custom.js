@@ -49,3 +49,27 @@ $( document ).on( 'click', '.js-trigger3', function( e ) {
       e.preventDefault();
 
 } );
+
+$( document ).on( 'click', '.js-trigger5', function( e ) {
+
+     $( '.js-target5' ).each( function() {
+
+          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-FlipUp90  fil-ani-is-hidden' );
+
+     } );
+
+     e.preventDefault();
+
+} );
+
+$( document ).on( 'click', '.js-trigger6', function( e ) {
+
+     $( '.js-target6' ).each( function() {
+
+          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-FlipDown90  fil-ani-is-hidden' );
+
+     } );
+
+     e.preventDefault();
+
+} );

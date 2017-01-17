@@ -1513,9 +1513,46 @@ h6, .h6 {
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.36, 0.51, 0.54, 1.16); }
 
+@keyframes fil-ani-FlipUp90 {
+  from {
+    transform: perspective(800px) translateY(40%) rotateX(-90deg);
+    opacity: 0; }
+  to {
+    transform: perspective(800px) translateY(0) rotateX(0deg);
+    opacity: 1; } }
+
+.fil-ani-parent-perspective {
+  perspective: 800px; }
+
+.fil-ani-FlipUp90 {
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  animation-name: fil-ani-FlipUp90;
+  animation-timing-function: ease;
+  animation-fill-mode: both; }
+
+@keyframes fil-ani-FlipDown90 {
+  from {
+    transform: perspective(800px) translateY(-40%) rotateX(90deg);
+    opacity: 0; }
+  to {
+    transform: perspective(800px) translateY(0) rotateX(0deg);
+    opacity: 1; } }
+
+.fil-ani-parent-perspective {
+  perspective: 800px; }
+
+.fil-ani-FlipDown90 {
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  animation-name: fil-ani-FlipDown90;
+  animation-timing-function: ease;
+  animation-fill-mode: both; }
+  .fil-ani-FlipDown90.reverse {
+    animation-direction: reverse; }
+
 /**
 
-* fadein-moveright
 
 * flipup-90
 * flipdown-90
