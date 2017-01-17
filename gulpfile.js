@@ -8,7 +8,7 @@ var concat                  = require( 'gulp-concat' );
 
 gulp.task('html', function() {
     return gulp.src('source/templates/*.html')
-    .pipe(nunjucks.compile({name: 'Sindre'}))
+    .pipe(nunjucks.compile())
     .pipe(gulp.dest('app'))
     .pipe(browserSync.reload({
         stream: true
@@ -50,14 +50,17 @@ gulp.task('vendor-js', function(){
 gulp.task('custom-js', function(){
     return gulp.src( 'source/js/**/*.js' )
     .pipe( concat( 'custom.js' ) )
-    .pipe( gulp.dest( 'app/js' ) );
+    .pipe( gulp.dest( 'app/js' ) )
+    .pipe(browserSync.reload({
+        stream: true
+    }) )
 });
 
 gulp.task('watch', function (){
     gulp.watch('source/scss/**/*.scss', ['sass']);
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('source/templates/**/*.html', ['html']);
-    gulp.watch('source/js/**/*.js', browserSync.reload);
+    gulp.watch('source/js/**/*.js', ['custom-js']);
 });
 
 

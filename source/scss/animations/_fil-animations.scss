@@ -45,7 +45,7 @@
  */
 @for $i from 1 through 40 {
 
-   .anim-delay-#{ $i * 100 } {
+   .fil-ani-delay-#{ $i * 100 } {
        animation-delay: #{ $i * 100 }ms;
    }
    //
@@ -53,7 +53,7 @@
   //      animation-delay: #{ $i * 200 }ms;
   //  }
 
-   .anim--dur-#{ $i * 100 } {
+   .fil-ani-dur-#{ $i * 100 } {
        animation-duration: #{ $i * 100 }ms;
    }
 
@@ -68,7 +68,9 @@
  $easein-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
  $easeout-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
  $easein-back: cubic-bezier(.57, .07, .6, 1.71);
- $easeout-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ // $easeout-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+//custom
+ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 
  .entrance {
    animation-timing-function: $easeout-quad;
@@ -83,13 +85,89 @@
    animation-timing-function: $easein-back;
  }
 
-/**
-* Entrances
-* fadein
-* fadein-scaleup
-* fadein-moveup-scaleup
 
-* fadein-moveleft
+
+// Entrances
+.fil-ani-is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+// fadein
+@keyframes fil-ani-fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fil-ani-fadeIn {
+  animation-name: fil-ani-fadeIn;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
+// fadein-scaleup
+@keyframes fil-ani-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0) scale(0.8, 0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+  // transition: transform 300ms ease, opacity 200ms ease;
+.fil-ani-fadeInUp {
+   animation-name: fil-ani-fadeInUp;
+   animation-fill-mode: both;
+   animation-timing-function: $easeout-back;
+}
+
+// fadein-moveleft
+
+@keyframes fil-ani-fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-30%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fil-ani-fadeInLeft {
+  animation-name: fil-ani-fadeInLeft;
+  animation-fill-mode: both;
+  animation-timing-function: $easeout-back;
+}
+
+@keyframes fil-ani-fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(30%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fil-ani-fadeInRight {
+  animation-name: fil-ani-fadeInRight;
+  animation-fill-mode: both;
+  animation-timing-function: $easeout-back;
+}
+
+/**
+
 * fadein-moveright
 
 * flipup-90
