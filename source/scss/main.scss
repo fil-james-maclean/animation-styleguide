@@ -10,3 +10,16 @@
 @import "helpers/layout";
 @import "helpers/decoration";
 @import "animations/fil-animations";
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.demo-box {
+  width: 100%;
+  height: 180px;
+}

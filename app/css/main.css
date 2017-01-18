@@ -1551,16 +1551,167 @@ h6, .h6 {
   .fil-ani-FlipDown90.reverse {
     animation-direction: reverse; }
 
+@keyframes fil-ani-fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+.fil-ani-fadeOut {
+  animation-name: fil-ani-fadeOut;
+  animation-fill-mode: both;
+  animation-timing-function: ease; }
+
+@keyframes fil-ani-fadeOutDown {
+  from {
+    opacity: 1;
+    transform: none; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0) scale(0.8, 0.8); } }
+
+.fil-ani-fadeOutDown {
+  animation-name: fil-ani-fadeOutDown;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.78, -0.21, 0.84, 0.78); }
+
+@keyframes fil-ani-fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: none; }
+  to {
+    opacity: 0;
+    transform: translate3d(-30%, 0, 0); } }
+
+.fil-ani-fadeOutLeft {
+  animation-name: fil-ani-fadeOutLeft;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.78, -0.21, 0.84, 0.78); }
+
+@keyframes fil-ani-fadeOutRight {
+  from {
+    opacity: 1;
+    transform: none; }
+  to {
+    opacity: 0;
+    transform: translate3d(30%, 0, 0); } }
+
+.fil-ani-fadeOutRight {
+  animation-name: fil-ani-fadeOutRight;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.78, -0.21, 0.84, 0.78); }
+
+@keyframes fil-ani-FlipOutUp90 {
+  from {
+    transform: perspective(800px) translateY(0) rotateX(0deg);
+    opacity: 1; }
+  to {
+    transform: perspective(800px) translateY(-40%) rotateX(90deg);
+    opacity: 0; } }
+
+.fil-ani-FlipOutUp90 {
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  animation-name: fil-ani-FlipOutUp90;
+  animation-timing-function: ease;
+  animation-fill-mode: both; }
+
+@keyframes fil-ani-FlipOutDown90 {
+  from {
+    transform: perspective(800px) translateY(0) rotateX(0deg);
+    opacity: 1; }
+  to {
+    transform: perspective(800px) translateY(40%) rotateX(-90deg);
+    opacity: 0; } }
+
+.fil-ani-parent-perspective {
+  perspective: 800px; }
+
+.fil-ani-FlipOutDown90 {
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  animation-name: fil-ani-FlipOutDown90;
+  animation-timing-function: ease;
+  animation-fill-mode: both; }
+
+/**
+* ====== Card Flip Execute =======
+*/
+.fil-ani-container3d {
+  position: relative;
+  perspective: 800px; }
+
+.fil-ani-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d; }
+  .fil-ani-card.fil-ani-card__flipped {
+    transform: translateZ(0) translateX(0) rotateY(180deg); }
+
+.fil-ani-card--front,
+.fil-ani-card--back {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.fil-ani-card--back {
+  transform: rotateY(180deg); }
+
+@keyframes fil-ani-FlipLeft180 {
+  from {
+    transform: translateZ(0) translateX(0) rotateY(0deg); }
+  45% {
+    transform: translateZ(150px) translateX(30%) rotateY(-90deg); }
+  to {
+    transform: translateZ(0) translateX(0) rotateY(-180deg); } }
+
+.fil-ani-parent-perspective {
+  perspective: 800px; }
+
+.fil-ani-FlipLeft180 {
+  animation-name: fil-ani-FlipLeft180;
+  animation-timing-function: linear;
+  animation-fill-mode: both; }
+
+@keyframes fil-ani-FlipRight180 {
+  from {
+    transform: translateZ(0) translateX(0) rotateY(-180deg); }
+  60% {
+    transform: translateZ(150px) translateX(-20%) rotateY(-90deg); }
+  to {
+    transform: translateZ(0) translateX(0) rotateY(0deg); } }
+
+.fil-ani-FlipRight180 {
+  animation-name: fil-ani-FlipRight180;
+  animation-timing-function: linear;
+  animation-fill-mode: both; }
+
+/**
+* Enphasis
+*/
+@keyframes fil-ani-PulseScale {
+  from {
+    transform: scale3d(1, 1, 1); }
+  30% {
+    transform: scale3d(1.1, 1.1, 1.1); }
+  45% {
+    transform: scale3d(1, 1, 1); }
+  70% {
+    transform: scale3d(1.15, 1.15, 1.15); }
+  to {
+    transform: scale3d(1, 1, 1); } }
+
+.fil-ani-PulseScale {
+  animation-name: fil-ani-PulseScale;
+  animation-fill-mode: both; }
+
 /**
 
-
-* flipup-90
-* flipdown-90
-* flipleft-180
-
-
-* Exits
-* fadeout
 * fadeout-scaledown
 * fadeout-movedown-scaledown
 * fadeout-moveup-scaleup (moved the UI towards the user past the screen, avoid?)
@@ -1591,3 +1742,12 @@ h6, .h6 {
 * flash-secondary
 * flash-primay
 */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.demo-box {
+  width: 100%;
+  height: 180px; }
