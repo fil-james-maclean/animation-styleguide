@@ -191,3 +191,16 @@ $( document ).on( 'click', '.js-trigger15', function( e ) {
      e.preventDefault();
 
 } );
+
+
+$( document ).on( 'click', '.js-trigger16', function( e ) {
+
+     $( '.js-target16' ).each( function() {
+
+          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-PulseOutline' );
+
+     } );
+
+     e.preventDefault();
+
+} );

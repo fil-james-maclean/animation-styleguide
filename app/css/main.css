@@ -1697,17 +1697,72 @@ h6, .h6 {
 @keyframes fil-ani-PulseScale {
   from {
     transform: scale3d(1, 1, 1); }
-  30% {
-    transform: scale3d(1.1, 1.1, 1.1); }
-  45% {
-    transform: scale3d(1, 1, 1); }
-  70% {
+  25% {
+    transform: scale3d(0.8, 0.8, 0.8); }
+  50% {
     transform: scale3d(1.15, 1.15, 1.15); }
   to {
     transform: scale3d(1, 1, 1); } }
 
 .fil-ani-PulseScale {
   animation-name: fil-ani-PulseScale;
+  animation-fill-mode: both; }
+
+@keyframes fil-ani-PulseOutline {
+  from {
+    transform: scale3d(1, 1, 1);
+    animation-timing-function: ease-out; }
+  50% {
+    transform: scale3d(0.8, 0.8, 0.8); }
+  55% {
+    transform: scale3d(1, 1, 1); }
+  60% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: #666666;
+    outline-offset: 6px;
+    animation-timing-function: step-start; }
+  65% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: #666666;
+    outline-offset: 12px; }
+  70% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: #666666;
+    outline-offset: 24px; }
+  75% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: #666666;
+    outline-offset: 32px; }
+  80% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: #666666;
+    outline-offset: 26px; }
+  90% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: #666666;
+    outline-offset: 8px; }
+  to {
+    transform: scale3d(1, 1, 1);
+    outline-width: 0px;
+    outline-style: none;
+    outline-color: #666666;
+    outline-offset: 0px;
+    animation-timing-function: step-end; } }
+
+.fil-ani-PulseOutline {
+  animation-name: fil-ani-PulseOutline;
   animation-fill-mode: both; }
 
 /**
@@ -1731,6 +1786,7 @@ h6, .h6 {
 * pulse-outline
 * light-flare
 * spotlight
+
 * flipdown-180
 * flipleft-180
 * flipright-180

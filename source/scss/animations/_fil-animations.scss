@@ -434,15 +434,19 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
     transform: scale3d(1, 1, 1);
   }
 
-  30% {
-    transform: scale3d(1.10, 1.10, 1.10);
+  25% {
+    transform: scale3d(0.8, 0.8, 0.8);
   }
 
-  45% {
-    transform: scale3d(1, 1, 1);
-  }
+  // 35% {
+  //   transform: scale3d(1.10, 1.10, 1.10);
+  // }
 
-  70% {
+  // 45% {
+  //   transform: scale3d(1, 1, 1);
+  // }
+
+  50% {
     transform: scale3d(1.15, 1.15, 1.15);
   }
 
@@ -454,6 +458,95 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 .fil-ani-PulseScale {
   animation-name: fil-ani-PulseScale;
   // animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+
+@keyframes fil-ani-PulseOutline {
+
+  from {
+    transform: scale3d(1, 1, 1);
+    animation-timing-function: ease-out;
+
+  }
+
+  50% {
+    transform: scale3d(0.8, 0.8, 0.8);
+    // animation-timing-function: ease-in;
+  }
+
+  55% {
+    transform: scale3d(1, 1, 1);
+    // outline-width: 1px;
+    // // outline-style: solid;
+    // // outline-color: $grey60;
+    // // outline-offset: 2px;
+    // animation-timing-function: step-start;
+  }
+  60% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $grey60;
+    outline-offset: 6px;
+    animation-timing-function: step-start;
+  }
+  65% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $grey60;
+    outline-offset: 12px;
+    // animation-timing-function: step-start;
+  }
+  70% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $grey60;
+    outline-offset: 24px;
+    // animation-timing-function: step-start;
+  }
+  75% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $grey60;
+    outline-offset: 32px;
+    // animation-timing-function: step-start;
+  }
+  80% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $grey60;
+    outline-offset: 26px;
+    // animation-timing-function: step-start;
+  }
+  90% {
+    transform: scale3d(1, 1, 1);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $grey60;
+    outline-offset: 8px;
+    // animation-timing-function: step-start;
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+    outline-width: 0px;
+    outline-style: none;;
+    outline-color: $grey60;
+    outline-offset: 0px;
+    animation-timing-function: step-end;
+
+  }
+
+}
+
+.fil-ani-PulseOutline {
+  animation-name: fil-ani-PulseOutline;
+
   animation-fill-mode: both;
 }
 
@@ -479,6 +572,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 * pulse-outline
 * light-flare
 * spotlight
+
 * flipdown-180
 * flipleft-180
 * flipright-180
