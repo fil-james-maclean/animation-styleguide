@@ -1178,6 +1178,88 @@ h6, .h6 {
 .circle {
   border-radius: 100%; }
 
+.btn {
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px 9px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: background 0.2s ease, color 0.2s ease; }
+  .btn:focus {
+    outline: none; }
+
+.btn--small {
+  padding-top: 2px;
+  padding-bottom: 1px; }
+
+.btn-cta {
+  background: #E57725;
+  color: #FFFFFF; }
+  .btn-cta:hover {
+    background: #FF8D31;
+    color: #FFFFFF; }
+  .btn-cta:focus {
+    background: #F26730;
+    color: #FFFFFF; }
+
+.btn-secondary {
+  background: #016FAD;
+  color: #FFFFFF; }
+  .btn-secondary:hover {
+    background: #00A6E0;
+    color: #FFFFFF; }
+  .btn-secondary:focus {
+    background: #006193;
+    color: #FFFFFF; }
+
+.btn-tertiary {
+  background: #FFFFFF;
+  color: #016FAD;
+  border: 1px solid #016FAD; }
+  .btn-tertiary:hover {
+    background: #00A6E0;
+    border-color: #00A6E0;
+    color: #FFFFFF; }
+  .btn-tertiary:focus {
+    background: #006193;
+    color: #FFFFFF; }
+
+.btn-link {
+  background: transparent;
+  color: #016FAD;
+  padding: 8px 0; }
+  .btn-link:hover {
+    color: #006193; }
+  .btn-link:focus {
+    color: #006193; }
+
+.btn.disabled {
+  cursor: not-allowed;
+  background: #FFFFFF;
+  color: #BFBFBF;
+  border: 1px solid #BFBFBF; }
+  .btn.disabled:hover {
+    background: #FFFFFF;
+    color: #BFBFBF; }
+
+.btn-nav {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: rem-calc(16); }
+  .btn-nav:hover {
+    color: #EAF2F6;
+    text-decoration: underline; }
+
+.equalize-buttons .btn {
+  min-width: 234px;
+  /* [1] */ }
+
 /**
  * @extended as a default into animations
  */
@@ -1474,7 +1556,7 @@ h6, .h6 {
   animation-fill-mode: both;
   animation-timing-function: ease; }
 
-@keyframes fil-ani-fadeInUp {
+@keyframes fil-ani-fadeInScaleUp {
   from {
     opacity: 0;
     transform: translate3d(0, 20%, 0) scale(0.8, 0.8); }
@@ -1482,8 +1564,47 @@ h6, .h6 {
     opacity: 1;
     transform: none; } }
 
+.fil-ani-fadeInScaleUp {
+  animation-name: fil-ani-fadeInScaleUp;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.36, 0.51, 0.54, 1.16); }
+
+@keyframes fil-ani-fadeInScaleDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0) scale(1.1, 1.1); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+.fil-ani-fadeInScaleDown {
+  animation-name: fil-ani-fadeInScaleDown;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.36, 0.51, 0.54, 1.16); }
+
+@keyframes fil-ani-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
 .fil-ani-fadeInUp {
   animation-name: fil-ani-fadeInUp;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.36, 0.51, 0.54, 1.16); }
+
+@keyframes fil-ani-fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+.fil-ani-fadeInDown {
+  animation-name: fil-ani-fadeInDown;
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.36, 0.51, 0.54, 1.16); }
 
@@ -1562,13 +1683,52 @@ h6, .h6 {
   animation-fill-mode: both;
   animation-timing-function: ease; }
 
-@keyframes fil-ani-fadeOutDown {
+@keyframes fil-ani-fadeOutScaleDown {
   from {
     opacity: 1;
     transform: none; }
   to {
     opacity: 0;
     transform: translate3d(0, 20%, 0) scale(0.8, 0.8); } }
+
+.fil-ani-fadeOutScaleDown {
+  animation-name: fil-ani-fadeOutScaleDown;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.78, -0.21, 0.84, 0.78); }
+
+@keyframes fil-ani-fadeOutScaleUp {
+  from {
+    opacity: 1;
+    transform: none; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0) scale(1.1, 1.1); } }
+
+.fil-ani-fadeOutScaleUp {
+  animation-name: fil-ani-fadeOutScaleUp;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.78, -0.21, 0.84, 0.78); }
+
+@keyframes fil-ani-fadeOutUp {
+  from {
+    opacity: 1;
+    transform: none; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0); } }
+
+.fil-ani-fadeOutUp {
+  animation-name: fil-ani-fadeOutUp;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.78, -0.21, 0.84, 0.78); }
+
+@keyframes fil-ani-fadeOutDown {
+  from {
+    opacity: 1;
+    transform: none; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0); } }
 
 .fil-ani-fadeOutDown {
   animation-name: fil-ani-fadeOutDown;
@@ -1765,6 +1925,19 @@ h6, .h6 {
   animation-name: fil-ani-PulseOutline;
   animation-fill-mode: both; }
 
+@keyframes fil-ani-Shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+.fil-ani-Shake {
+  animation-name: fil-ani-Shake;
+  animation-timing-function: linear;
+  animation-fill-mode: both; }
+
 /**
 
 * fadeout-scaledown
@@ -1805,5 +1978,5 @@ html {
   box-sizing: inherit; }
 
 .demo-box {
-  width: 100%;
+  width: 180px;
   height: 180px; }

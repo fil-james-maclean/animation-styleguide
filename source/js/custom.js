@@ -16,7 +16,46 @@ $( document ).on( 'click', '.js-trigger2', function( e ) {
 
     $( '.js-target2' ).each( function() {
 
-         $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-fadeInUp fil-ani-is-hidden' );
+         $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-fadeInScaleUp fil-ani-is-hidden' );
+
+    } );
+
+    e.preventDefault();
+
+} );
+
+
+$( document ).on( 'click', '.js-trigger17', function( e ) {
+
+    $( '.js-target17' ).each( function() {
+
+         $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-fadeInScaleDown fil-ani-is-hidden' );
+
+    } );
+
+    e.preventDefault();
+
+} );
+
+
+$( document ).on( 'click', '.js-trigger18', function( e ) {
+
+    $( '.js-target18' ).each( function() {
+
+         $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeInUp fil-ani-is-hidden' );
+
+    } );
+
+    e.preventDefault();
+
+} );
+
+
+$( document ).on( 'click', '.js-trigger19', function( e ) {
+
+    $( '.js-target19' ).each( function() {
+
+         $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeInDown fil-ani-is-hidden' );
 
     } );
 
@@ -102,6 +141,42 @@ $( document ).on( 'click', '.js-trigger8', function( e ) {
 $( document ).on( 'click', '.js-trigger9', function( e ) {
 
   $( '.js-target9' ).each( function() {
+
+       $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutScaleDown fil-ani-is-hidden' );
+
+  } );
+
+  e.preventDefault();
+
+} );
+
+$( document ).on( 'click', '.js-trigger22', function( e ) {
+
+  $( '.js-target22' ).each( function() {
+
+       $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutScaleUp fil-ani-is-hidden' );
+
+  } );
+
+  e.preventDefault();
+
+} );
+
+$( document ).on( 'click', '.js-trigger20', function( e ) {
+
+  $( '.js-target20' ).each( function() {
+
+       $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutUp fil-ani-is-hidden' );
+
+  } );
+
+  e.preventDefault();
+
+} );
+
+$( document ).on( 'click', '.js-trigger21', function( e ) {
+
+  $( '.js-target21' ).each( function() {
 
        $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutDown fil-ani-is-hidden' );
 
@@ -198,6 +273,18 @@ $( document ).on( 'click', '.js-trigger16', function( e ) {
      $( '.js-target16' ).each( function() {
 
           $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-PulseOutline' );
+
+     } );
+
+     e.preventDefault();
+
+} );
+
+$( document ).on( 'click', '.js-trigger23', function( e ) {
+
+     $( '.js-target23' ).each( function() {
+
+          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-1200 fil-ani-Shake' );
 
      } );
 

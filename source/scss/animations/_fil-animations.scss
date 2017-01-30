@@ -111,7 +111,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 }
 
 // fadein-scaleup
-@keyframes fil-ani-fadeInUp {
+@keyframes fil-ani-fadeInScaleUp {
   from {
     opacity: 0;
     transform: translate3d(0, 20%, 0) scale(0.8, 0.8);
@@ -123,11 +123,68 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
   // transition: transform 300ms ease, opacity 200ms ease;
-.fil-ani-fadeInUp {
-   animation-name: fil-ani-fadeInUp;
+.fil-ani-fadeInScaleUp {
+   animation-name: fil-ani-fadeInScaleUp;
    animation-fill-mode: both;
    animation-timing-function: $easeout-back;
 }
+
+@keyframes fil-ani-fadeInScaleDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0) scale(1.1, 1.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+  // transition: transform 300ms ease, opacity 200ms ease;
+.fil-ani-fadeInScaleDown {
+   animation-name: fil-ani-fadeInScaleDown;
+   animation-fill-mode: both;
+   animation-timing-function: $easeout-back;
+}
+
+// fadein-moveUp
+
+@keyframes fil-ani-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fil-ani-fadeInUp {
+  animation-name: fil-ani-fadeInUp;
+  animation-fill-mode: both;
+  animation-timing-function: $easeout-back;
+}
+
+@keyframes fil-ani-fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fil-ani-fadeInDown {
+  animation-name: fil-ani-fadeInDown;
+  animation-fill-mode: both;
+  animation-timing-function: $easeout-back;
+}
+
 
 // fadein-moveleft
 
@@ -240,7 +297,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 }
 
 
-@keyframes fil-ani-fadeOutDown {
+@keyframes fil-ani-fadeOutScaleDown {
   from {
     opacity: 1;
     transform: none;
@@ -252,10 +309,66 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeOutDown {
-   animation-name: fil-ani-fadeOutDown;
+.fil-ani-fadeOutScaleDown {
+   animation-name: fil-ani-fadeOutScaleDown;
    animation-fill-mode: both;
    animation-timing-function: $back-easein;
+}
+
+@keyframes fil-ani-fadeOutScaleUp {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0) scale(1.1, 1.1);
+  }
+}
+
+.fil-ani-fadeOutScaleUp {
+   animation-name: fil-ani-fadeOutScaleUp;
+   animation-fill-mode: both;
+   animation-timing-function: $back-easein;
+}
+
+@keyframes fil-ani-fadeOutUp {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+
+  }
+}
+
+.fil-ani-fadeOutUp {
+  animation-name: fil-ani-fadeOutUp;
+  animation-fill-mode: both;
+  animation-timing-function: $back-easein;
+}
+
+@keyframes fil-ani-fadeOutDown {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+
+  }
+}
+
+.fil-ani-fadeOutDown {
+  animation-name: fil-ani-fadeOutDown;
+  animation-fill-mode: both;
+  animation-timing-function: $back-easein;
 }
 
 
@@ -550,6 +663,25 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   animation-fill-mode: both;
 }
 
+@keyframes fil-ani-Shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.fil-ani-Shake {
+  animation-name: fil-ani-Shake;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
 
 /**
 

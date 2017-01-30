@@ -1,0 +1,116 @@
+.btn {
+    display: inline-block;
+    position: relative;
+    padding: 10px gutter( 1 ) 9px; // 48px height
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    appearance: none;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+    .btn--small {
+        padding-top: 2px; padding-bottom: 1px; // 32px height
+    }
+
+
+    .btn-cta {
+        background: $orange2;
+        color: $white;
+
+        &:hover {
+            background: $orange3;
+            color: $white;
+        }
+
+        &:focus {
+            background: $orange1;
+            color: $white;
+        }
+    }
+
+    .btn-secondary {
+        background: $blue2;
+        color: $white;
+
+        &:hover {
+            background: $blue3;
+            color: $white;
+        }
+
+        &:focus {
+            background: $blue1;
+            color: $white;
+        }
+    }
+
+    .btn-tertiary {
+        background: $white;
+        color: $blue2;
+        border: 1px solid $blue2;
+
+        &:hover {
+            background: $blue3;
+            border-color: $blue3;
+            color: $white;
+        }
+
+        &:focus {
+            background: $blue1;
+            color: $white;
+        }
+    }
+
+    .btn-link {
+        background: transparent;
+        color: $blue2;
+        padding: $spacer-8 0;
+
+        &:hover {
+            color: $blue1;
+            // text-decoration: underline;
+        }
+
+        &:focus {
+            color: $blue1;
+        }
+    }
+
+    .btn.disabled {
+        cursor: not-allowed;
+        background: $white;
+        color: $grey25;
+        border: 1px solid $grey25;
+
+        &:hover {
+            background: $white;
+            color: $grey25;
+        }
+    }
+
+    .btn-nav {
+        margin: 0;
+        color: $white;
+        font-size: rem-calc(16);
+
+        &:hover {
+            color: $blue4;
+            text-decoration: underline;
+        }
+    }
+
+
+
+// Equalize buttons widths
+// 1. Length of 'Open my Investment ISA'
+.equalize-buttons {
+    .btn {
+        min-width: 234px; /* [1] */
+    }
+}

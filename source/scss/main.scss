@@ -9,6 +9,7 @@
 @import "helpers/spacing";
 @import "helpers/layout";
 @import "helpers/decoration";
+@import "atoms/buttons";
 @import "animations/fil-animations";
 
 
@@ -20,6 +21,6 @@ html {
 }
 
 .demo-box {
-  width: 100%;
+  width: 180px;
   height: 180px;
 }
