@@ -291,3 +291,16 @@ $( document ).on( 'click', '.js-trigger23', function( e ) {
      e.preventDefault();
 
 } );
+
+$( document ).on( 'click', '.js-trigger24', function( e ) {
+
+     $( '.js-target24' ).each( function() {
+
+          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-Spotlight' );
+          $( '.js-overlay-target' ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-400 fil-ani-fadeIn' );
+
+     } );
+
+     e.preventDefault();
+
+} );

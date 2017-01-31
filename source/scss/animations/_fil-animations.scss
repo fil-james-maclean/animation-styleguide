@@ -683,6 +683,12 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   animation-fill-mode: both;
 }
 
+
+.fil-ani-Spotlight {
+  z-index: 50;
+  position: relative;
+  box-shadow: 0px 4px 40px 0px rgba(255,255,255,0.2);
+}
 /**
 
 * fadeout-scaledown
