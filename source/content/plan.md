@@ -3,7 +3,7 @@
 
 - Not enough consistency or standards behind the current animations
 - Not making good use of animations to improve user experience.
- 
+
 
 ## Desired outcomes
 
@@ -28,6 +28,7 @@
 4. Loading and progress
 5. EI Canvas movements
 6. Card content reveal
+
 
 *Extra:*
 - CSS library used by products and viewable by designers for simple spec’ing

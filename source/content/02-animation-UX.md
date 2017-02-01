@@ -1,9 +1,13 @@
 what animation does for the user
 
+
+
 Respect the user's time
    *Animations should be a quick as they can be*
 Under the user's control
    *They should be triggered by user input not happen on their own*
+
+
 
 ## Types of animation
 1. UI Framework animations
@@ -13,8 +17,6 @@ Under the user's control
 
 ### UI framework animations
 *Utilitarian animations that show just enough to achieve the desired effect*
-
-
 
 #### What they do
 
@@ -54,3 +56,12 @@ Engage the user
 
 Help portray complex information and concepts
 - Do what static content can't
+
+
+## Things to avoid
+
+Large and fast motion
+The larger the object the slower it should move
+
+Throwing UI at the user
+Rapidly increasing the sale of something can give the effect of acceleration towards the user, which can make some uncomfortable or even sick.
