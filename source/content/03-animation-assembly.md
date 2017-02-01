@@ -15,6 +15,7 @@ Anticipation
 Weight
 
 metaphorical 3d space
+[Image of sketch]
 
 
 Entrance

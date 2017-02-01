@@ -16,7 +16,7 @@ Less is More
    *Animations are to be used sparingly and should mostly go unnoticed by the end user. The more animation is used the less emphasis it carries.*
 
 Be modest
-   *Even if a lot of time was spend crafting an animation that doesn't mean users should know about it. It is tempting to place an animation front and center or embellish it to reflect level of effort, this often has the affect of looking 'boastful' which is not appropriate.*
+   *It's tempting to place an animation front and center or embellish it to reflect the effort that went into it. At best this looks 'boastful' and at worst can leave users confused as to the level of significance an animation has.*
 
 https://startupsventurecapital.com/your-ui-isn-t-a-disney-movie-703f7fbd24d2#.1nzdq9i7e
 
