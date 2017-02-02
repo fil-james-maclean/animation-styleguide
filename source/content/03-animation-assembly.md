@@ -1,36 +1,40 @@
 03-animation-assembly
 
-Motion
+## Commonly animated properties
+*UI animation changes one or more of these things over time. There are others but this covers most cases*
+
+### Motion
 movements and rotations about the interface
 
-Scale
+### Scale
 Growing larger or smaller
 
-Opacity
+### Opacity
 Changing between transparent and opaque
 
-Colour
+### Colour
 Changing hue and brightness
 
-3d rotations
+### 3d rotations
 Rotating an object in its 3d space or changing the view of the space
 
 
-Timing
-Duration
-Easing
+### Staging
+Where do you want the user to look?
+https://www.youtube.com/watch?v=u-SXLaQGg50
 
-Respect the user's time
-   *Animations should be a quick as they can be*
-Under the user's control
-   *They should be triggered by user input not happen on their own*
-   
+### Duration
+How long should the animation be?
+*Roughly:*
+- Small things 3-600ms
+- Big things 8-1600ms
+http://valhead.com/2016/05/05/how-fast-should-your-ui-animations-be/
 
-Tension vs Friction
-Anticipation
-Weight
+### Easing
+What is the velocity and weight of this object?
+https://www.youtube.com/watch?v=fQBFsTqbKhY
 
-metaphorical 3d space
+### metaphorical 3d space
 [Image of sketch]
 
 

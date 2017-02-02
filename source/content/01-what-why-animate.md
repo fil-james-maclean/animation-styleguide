@@ -15,6 +15,7 @@ Don't animate for the sake of it.
 Less is More
    *Animations are to be used sparingly and should mostly go unnoticed by the end user. The more animation is used the less emphasis it carries.*
    https://startupsventurecapital.com/your-ui-isn-t-a-disney-movie-703f7fbd24d2#.1nzdq9i7e
+   https://medium.com/@stevenfabre/invisible-animation-ffa27d0b77e5#.h24cxph10
 
 Be modest
    *It's tempting to place an animation front and center or embellish it to reflect the effort that went into it. At best this looks 'boastful' and at worst can leave users confused as to the level of significance an animation has.*

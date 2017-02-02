@@ -2,6 +2,8 @@
 
 Animation can make products easier to understand and use. It can also evoke certain feelings and change perceptions of a product.
 
+When animation is included as part of the design process there is more opportunity to make innovative interaction patterns.
+
 
 ## Types of animation
 1. UI Framework animations
@@ -26,6 +28,9 @@ Guide the user
 - Draw attention to the "Next" action
 - Reinforce navigational metaphors
 - Reinforce "layering" metaphors
+
+Some more thinking on UI animations role
+https://medium.freecodecamp.com/the-principles-of-ux-choreography-69c91c2cbc2a#.e6cum3fjf
 
 
 ### UI Flourish animations
