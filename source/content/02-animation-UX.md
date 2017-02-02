@@ -1,12 +1,6 @@
-what animation does for the user
+## What animation does for the user
 
-
-
-Respect the user's time
-   *Animations should be a quick as they can be*
-Under the user's control
-   *They should be triggered by user input not happen on their own*
-
+Animation can make products easier to understand and use. It can also evoke certain feelings and change perceptions of a product.
 
 
 ## Types of animation
@@ -58,10 +52,23 @@ Help portray complex information and concepts
 - Do what static content can't
 
 
-## Things to avoid
+## Accessible animations
 
-Large and fast motion
-The larger the object the slower it should move
+### Accessibility requirements
+- Full article on accessible animations
+http://alistapart.com/blog/post/more-resources-for-accessible-animations
 
-Throwing UI at the user
-Rapidly increasing the sale of something can give the effect of acceleration towards the user, which can make some uncomfortable or even sick.
+- Provide play and pause controls for anything that starts automatically and lasts longer than five seconds.
+https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html
+
+- Not not have any part of the screen flashing more than three times per second.
+https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html
+
+### vestibular disorder (Motion Sensitivity)
+Full article on vestibular disorder (motion sensitivity) and other affects
+http://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity
+
+*Avoid triggers for vestibular disorder (motion sensitivity)*
+- Large and fast motion
+- Mismatching the direction and speed of an animation to a user input
+- Moving something across a large virtual distance
