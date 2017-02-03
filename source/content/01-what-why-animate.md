@@ -1,7 +1,9 @@
 ## What do we mean by "Animation"?
 User Interface (UI) animations happen on screen and are part of a digital product. They can make an interface easier to understand and use and also leave a positive impression at a subconscious level. When misused users can feel confused or put off.
 
-UI animation is different from traditional animation that tells a story. Although some of the rules still apply, the process and objectives for making a cartoon are different from designing interface animations.
+UI animation is different from traditional animation
+https://www.youtube.com/watch?v=5xnQSLxJmMg
+ that tells a story. Although some of the rules still apply, the process and objectives for making a cartoon are different from designing interface animations.
 
 
 ## Guiding principles for UI animations
