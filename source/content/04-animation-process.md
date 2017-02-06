@@ -21,14 +21,14 @@ https://24ways.org/2015/animating-your-brand/
 - More Utilitarian than Opulent
 - More Precise than playful
 - Easing should be heavy, slow to start and end
-- Bounce and spring are subtle, only enough to suggest a real weight
+- Bounce and spring are slight, only enough to suggest a real weight
 
 
 ### UI flourish animations
 - Don't demand attention
 - Not essential to the core work flows
 - Noticed subconsciously or after repeated use
-- Elegant and smooth
+- Elegant and subtle
 
 
 ### Editorial animations

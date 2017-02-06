@@ -3,18 +3,23 @@
 
 ### Motion
 movements and rotations about the interface
+[example - square moving left and right]
 
 ### Scale
 Growing larger or smaller
+[example - square growing larger and smaller]
 
 ### Opacity
 Changing between transparent and opaque
+[example - square fading in and out]
 
 ### Colour
 Changing hue and brightness
+[example - square changing red, green and blue]
 
 ### 3d rotations
 Rotating an object in its 3d space or changing the view of the space
+[example - cube rotating then stopping to show a face]
 
 
 ### Staging
@@ -40,6 +45,8 @@ For example a modal may appear to come up from the button that triggered it but 
 
 
 ## Our categories of animation (the four E's)
+*These serve as a checklist to make sure all likely situations that need animation are covered*
+
 1. Enter
 Add something too the screen
 

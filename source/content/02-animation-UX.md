@@ -6,9 +6,16 @@ When animation is included as part of the design process there is more opportuni
 
 
 ## Types of animation
+These categories of animation guide how design decisions are made. They also define the process for making them.
+
 1. UI Framework animations
+*Utilitarian animations that show just enough to achieve the desired effect*
+
 2. UI flourish animations
+*Extra detail that raises the bar*
+
 3. Editorial animations
+*Big set pieces of interactive content*
 
 
 ### UI framework animations
@@ -29,12 +36,13 @@ Guide the user
 - Reinforce navigational metaphors
 - Reinforce "layering" metaphors
 
-Some more thinking on UI animations role
+Some more thinking on the role of UI animation 
 https://medium.freecodecamp.com/the-principles-of-ux-choreography-69c91c2cbc2a#.e6cum3fjf
 
 
 ### UI Flourish animations
 *Extra detail that raises the bar*
+http://littlebigdetails.com/post/147845950467/makerbots-website-prints-the-hamburger-icon
 
 #### What they do
 
@@ -47,6 +55,8 @@ Allude to advanced features
 
 ### Editorial animations
 *Big set pieces of interactive content*
+https://www.nytimes.com/interactive/2016/12/28/us/year-in-interactive-graphics.html
+https://flowingdata.com/tag/new-york-times/
 
 #### What they do
 
@@ -66,7 +76,7 @@ http://alistapart.com/blog/post/more-resources-for-accessible-animations
 - Provide play and pause controls for anything that starts automatically and lasts longer than five seconds.
 https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html
 
-- Not not have any part of the screen flashing more than three times per second.
+- Do not have any part of the screen flashing more than three times per second.
 https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html
 
 ### vestibular disorder (Motion Sensitivity)
