@@ -11,6 +11,7 @@
 
 *The things we want people to think about us are expressed through the choice of easings and timings.*
 [Easings sketch]
+
 http://alistapart.com/article/designing-interface-animation
 https://24ways.org/2015/animating-your-brand/
 
@@ -75,6 +76,6 @@ Review the impact of the animation at a set date
 |  Prototype             |             x             |            x             |           x            |
 |  Accessibility review  |             x             |                          |           x            |
 |  Test                  |             x             |                          |                        |
-|  Optimise              |             x             |            x             |           x            |
-|  Release and Measure   |             x             |            x             |                        |
+|  Optimise              |             x             |            x             |                        |
+|  Release and Measure   |             x             |            x             |           x            |
 |  Review                |             x             |            x             |                        |

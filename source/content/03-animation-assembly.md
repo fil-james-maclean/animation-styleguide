@@ -22,6 +22,8 @@ Rotating an object in its 3d space or changing the view of the space
 [example - cube rotating then stopping to show a face]
 
 
+## How the properties change
+
 ### Staging
 Where do you want the user to look?
 https://www.youtube.com/watch?v=u-SXLaQGg50
