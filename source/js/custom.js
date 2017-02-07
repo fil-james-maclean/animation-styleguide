@@ -25,9 +25,9 @@ $( document ).on( 'click', '.js-trigger2', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-trigger17', function( e ) {
+$( document ).on( 'click', '.js-fil-ani-fadeInScaleDown-trigger', function( e ) {
 
-    $( '.js-target17' ).each( function() {
+    $( '.js-fil-ani-fadeInScaleDown-target' ).each( function() {
 
          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-fadeInScaleDown fil-ani-is-hidden' );
 
@@ -38,9 +38,9 @@ $( document ).on( 'click', '.js-trigger17', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-trigger18', function( e ) {
+$( document ).on( 'click', '.js-fil-ani-fadeInUp-trigger', function( e ) {
 
-    $( '.js-target18' ).each( function() {
+    $( '.js-fil-ani-fadeInUp-target' ).each( function() {
 
          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeInUp fil-ani-is-hidden' );
 
@@ -51,9 +51,9 @@ $( document ).on( 'click', '.js-trigger18', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-trigger19', function( e ) {
+$( document ).on( 'click', '.js-fil-ani-fadeInDown-trigger', function( e ) {
 
-    $( '.js-target19' ).each( function() {
+    $( '.js-fil-ani-fadeInDown-target' ).each( function() {
 
          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeInDown fil-ani-is-hidden' );
 
@@ -150,9 +150,9 @@ $( document ).on( 'click', '.js-trigger9', function( e ) {
 
 } );
 
-$( document ).on( 'click', '.js-trigger22', function( e ) {
+$( document ).on( 'click', '.js-fil-ani-fadeOutScaleUp-trigger', function( e ) {
 
-  $( '.js-target22' ).each( function() {
+  $( '.js-fil-ani-fadeOutScaleUp-target' ).each( function() {
 
        $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutScaleUp fil-ani-is-hidden' );
 
@@ -162,9 +162,9 @@ $( document ).on( 'click', '.js-trigger22', function( e ) {
 
 } );
 
-$( document ).on( 'click', '.js-trigger20', function( e ) {
+$( document ).on( 'click', '.js-fil-ani-fadeOutUp-trigger', function( e ) {
 
-  $( '.js-target20' ).each( function() {
+  $( '.js-fil-ani-fadeOutUp-target' ).each( function() {
 
        $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutUp fil-ani-is-hidden' );
 
@@ -174,9 +174,9 @@ $( document ).on( 'click', '.js-trigger20', function( e ) {
 
 } );
 
-$( document ).on( 'click', '.js-trigger21', function( e ) {
+$( document ).on( 'click', '.js-fil-ani-fadeOutDown-trigger', function( e ) {
 
-  $( '.js-target21' ).each( function() {
+  $( '.js-fil-ani-fadeOutDown-target' ).each( function() {
 
        $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutDown fil-ani-is-hidden' );
 
@@ -255,9 +255,9 @@ $( document ).on( 'click', '.js-trigger14', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-trigger15', function( e ) {
+$( document ).on( 'click', '.js-fil-ani-PulseOutline-trigger', function( e ) {
 
-     $( '.js-target15' ).each( function() {
+     $( '.js-fil-ani-PulseOutline-target' ).each( function() {
 
           $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-1000 fil-ani-PulseScale' );
 
@@ -268,7 +268,7 @@ $( document ).on( 'click', '.js-trigger15', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-trigger16', function( e ) {
+$( document ).on( 'click', '.js-fil-ani-PulseOutline-trigger', function( e ) {
 
      $( '.js-target16' ).each( function() {
 
@@ -280,9 +280,9 @@ $( document ).on( 'click', '.js-trigger16', function( e ) {
 
 } );
 
-$( document ).on( 'click', '.js-trigger23', function( e ) {
+$( document ).on( 'click', '.js-fil-ani-Shake-trigger', function( e ) {
 
-     $( '.js-target23' ).each( function() {
+     $( '.js-fil-ani-Shake-target' ).each( function() {
 
           $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-1200 fil-ani-Shake' );
 
@@ -292,9 +292,9 @@ $( document ).on( 'click', '.js-trigger23', function( e ) {
 
 } );
 
-$( document ).on( 'click', '.js-trigger24', function( e ) {
+$( document ).on( 'click', '.js-fil-ani-Spotlight-trigger', function( e ) {
 
-     $( '.js-target24' ).each( function() {
+     $( '.js-fil-ani-Spotlight-target' ).each( function() {
 
           $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-Spotlight' );
           $( '.js-overlay-target' ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-400 fil-ani-fadeIn' );
