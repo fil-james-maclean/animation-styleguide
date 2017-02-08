@@ -306,7 +306,7 @@ $( document ).on( 'click', '.js-fil-ani-Spotlight-trigger', function( e ) {
 
      $( '.js-fil-ani-Spotlight-target' ).each( function() {
 
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-Spotlight' );
+          $( this ).toggleClass( 'fil-ani-Spotlight' );
           $( '.js-overlay-target' ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-400 fil-ani-fadeIn' );
 
      } );

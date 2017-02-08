@@ -1,0 +1,91 @@
+$demo-box-size: 60px;
+
+@keyframes moveHorizontal {
+  from, to {
+    transform: translate3d(-150px, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(150px, 0, 0);
+  }
+}
+
+@keyframes scaleUpDown {
+  from, to {
+    transform: scale3d(1, 1, 1);
+  }
+
+  25% {
+    transform: scale3d(0.4, 0.4, 1);
+  }
+  55% {
+    transform: scale3d(1.6, 1.6, 1);
+  }
+}
+
+@keyframes fadeInOut {
+  from, to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes goRed {
+  from, to {
+
+  }
+
+  50% {
+    background: $red1;
+  }
+}
+
+@keyframes cubeRotate {
+  from {
+    transform: rotateX( 0deg ) rotateY( 0deg );
+  }
+  40% {
+    transform: rotateX( 6deg ) rotateY( 180deg );
+  }
+  to {
+    transform: rotateX( 0deg ) rotateY( 360deg );
+  }
+}
+
+.assemblyDemo {
+    height: $demo-box-size; width: $demo-box-size;
+    animation-iteration-count: infinite;
+    margin: 0 auto;
+
+}
+
+.assemblyDemo__motion {
+  animation-name: moveHorizontal;
+}
+
+.assemblyDemo__scale {
+  animation-name: scaleUpDown;
+}
+
+.assemblyDemo__opacity {
+  animation-name: fadeInOut;
+}
+
+.assemblyDemo__colour {
+  animation-name: goRed;
+}
+
+
+.assemblyDemo__3dcube {
+  transform-style: preserve-3d;
+  animation-name: cubeRotate;
+  animation-timing-function: linear;
+}
+
+.assemblyDemo__3dface{
+  position: absolute;
+  transform: rotateX( -180deg ) translateZ( 100px );
+}
