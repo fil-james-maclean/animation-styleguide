@@ -1,6 +1,10 @@
 @import "resets/normalize";
+
 @import "settings/variables";
 @import "settings/fonts";
+
+@import "resets/reset";
+
 @import "tools/units";
 @import "tools/mixins";
 @import "settings/typography";
@@ -9,10 +13,12 @@
 @import "helpers/spacing";
 @import "helpers/layout";
 @import "helpers/decoration";
+@import "atoms/icons";
+@import "atoms/links";
 @import "atoms/buttons";
 @import "animations/fil-animations";
 @import "animations/assembly-examples";
-
+@import "organisims/modal";
 
 html {
   box-sizing: border-box;

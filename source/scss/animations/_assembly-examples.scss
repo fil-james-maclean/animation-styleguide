@@ -10,6 +10,16 @@ $demo-box-size: 60px;
   }
 }
 
+@keyframes rotateOnce {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);;
+  }
+}
+
 @keyframes scaleUpDown {
   from, to {
     transform: scale3d(1, 1, 1);
@@ -64,6 +74,10 @@ $demo-box-size: 60px;
 
 .assemblyDemo__motion {
   animation-name: moveHorizontal;
+}
+
+.assemblyDemo__rotate {
+  animation-name: rotateOnce;
 }
 
 .assemblyDemo__scale {

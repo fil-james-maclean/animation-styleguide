@@ -1,0 +1,36 @@
+$close-button-width: 98px;
+
+.modal {
+    padding: 0;
+
+    outline: none;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid $grey15;
+
+    .close-button {
+        position: absolute;
+        top: 0; right: 0;
+        -webkit-appearance: none;
+        outline: none;
+        border: none;
+        background: none;
+        font-size: 20px;
+        width: $close-button-width; height: 100%;
+        border-left: 1px solid $grey15;
+    }
+/**
+* @include breakpoint( small only ) {
+*     top: 0 !important;
+* }
+*/
+}
+
+    .modal-header {}
+
+        .modal-header__title {
+            padding-right: gutter( 1 ) + $close-button-width;
+            padding-left: gutter( 1 );
+        }
+
+    .modal-content {}

@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+<div class="text-center  rhythmic">
+    <a class="btn  btn-cta" data-open="example-modal">Toggle modal</a>
+</div>
+
+<!-- Modal -->
+<div class="reveal  modal" id="example-modal" data-reveal>
+
+    <header class="modal-header  rhythmic  border-b  relative">
+
+        <h4 class="h4  modal-header__title">Some sort of modal title here</h4>
+
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true" class="icon-cross-light"></span>
+        </button>
+
+    </header>
+
+    <article class="modal-content  gutted  rhythmic">
+
+        <div class="wysiwyg">
+
+            <p class="block  rhythm-m-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta saepe ipsum dolorem ea fugit. Voluptate animi, officiis id eos minus. Beatae, molestias reiciendis vero distinctio magni dicta maiores deserunt repellendus.</p>
+
+            <p class="block  rhythm-m-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nam architecto illo veniam molestiae, deleniti velit libero vero cupiditate corporis ratione totam eligendi optio temporibus adipisci aut deserunt mollitia perferendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore officiis quam, hic ad dolor dolorem ullam debitis accusantium saepe possimus quia, molestias aspernatur fugit laborum nihil aliquid quibusdam, sequi consectetur.</p>
+
+            <p class="block  rhythm-m-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nam architecto illo veniam molestiae, deleniti velit libero vero cupiditate corporis ratione totam eligendi optio temporibus adipisci aut deserunt mollitia perferendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore officiis quam, hic ad dolor dolorem ullam debitis accusantium saepe possimus quia, molestias aspernatur fugit laborum nihil aliquid quibusdam, sequi consectetur.</p>
+
+            <div class="block  rhythm-m-1">
+                <a href="#" class="text-link-cta">Here is the window</a>
+            </div>
+
+            <div class="block  rhythm-m-1">
+                <a href="#" class="btn  btn-cta">And a wide open door</a>
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+<div class="overlay fil-ani-is-hidden js-overlay-target"></div>
+{% endblock %}
