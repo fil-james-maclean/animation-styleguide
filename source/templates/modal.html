@@ -2,18 +2,15 @@
 
 {% block content %}
 
-<div class="text-center  rhythmic">
-    <a class="btn  btn-cta" data-open="example-modal">Toggle modal</a>
-</div>
 
 <!-- Modal -->
-<div class="reveal  modal" id="example-modal" data-reveal>
+<div class="reveal  modal  fil-ani-is-hidden  js-modal-target  js-modal__is-closed" id="example-modal" data-reveal>
 
     <header class="modal-header  rhythmic  border-b  relative">
 
         <h4 class="h4  modal-header__title">Some sort of modal title here</h4>
 
-        <button class="close-button" data-close aria-label="Close modal" type="button">
+        <button class="close-button  js-modal-exit-trigger" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true" class="icon-cross-light"></span>
         </button>
 
@@ -25,22 +22,27 @@
 
             <p class="block  rhythm-m-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta saepe ipsum dolorem ea fugit. Voluptate animi, officiis id eos minus. Beatae, molestias reiciendis vero distinctio magni dicta maiores deserunt repellendus.</p>
 
-            <p class="block  rhythm-m-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nam architecto illo veniam molestiae, deleniti velit libero vero cupiditate corporis ratione totam eligendi optio temporibus adipisci aut deserunt mollitia perferendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore officiis quam, hic ad dolor dolorem ullam debitis accusantium saepe possimus quia, molestias aspernatur fugit laborum nihil aliquid quibusdam, sequi consectetur.</p>
-
-            <p class="block  rhythm-m-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nam architecto illo veniam molestiae, deleniti velit libero vero cupiditate corporis ratione totam eligendi optio temporibus adipisci aut deserunt mollitia perferendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore officiis quam, hic ad dolor dolorem ullam debitis accusantium saepe possimus quia, molestias aspernatur fugit laborum nihil aliquid quibusdam, sequi consectetur.</p>
 
             <div class="block  rhythm-m-1">
                 <a href="#" class="text-link-cta">Here is the window</a>
             </div>
 
-            <div class="block  rhythm-m-1">
-                <a href="#" class="btn  btn-cta">And a wide open door</a>
+            <div class="block">
+                <a href="#" class="btn  btn-cta  js-modal-execute-trigger">And a wide open door</a>
             </div>
 
         </div>
 
     </article>
 
+</div>
+
+
+
+<div class="text-center  rhythmic">
+    <a class="btn  btn-tertiary  js-enter-button js-modal-enter-trigger">Enter</a>
+    <a class="btn  btn-tertiary  js-exit-button  disabled  js-modal-exit-trigger">Exit</a>
+    <a class="btn  btn-tertiary  js-execute-button disabled  js-modal-execute-trigger">Execute</a>
 </div>
 
 

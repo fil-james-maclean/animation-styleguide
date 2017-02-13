@@ -314,3 +314,78 @@ $( document ).on( 'click', '.js-fil-ani-Spotlight-trigger', function( e ) {
      e.preventDefault();
 
 } );
+
+var modalEnterClasses = "fil-ani-delay-100 fil-ani-dur-500 fil-ani-fadeInScaleUp js-modal__is-open"
+var modalExitClasses = "fil-ani-is-hidden fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutScaleDown js-modal__is-closed"
+var modalExecuteClasses = "fil-ani-is-hidden fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOut js-modal__is-closed"
+
+var overlayEnterClasses = "fil-ani-dur-400 fil-ani-fadeIn"
+var overlayExitClasses = "fil-ani-dur-200 fil-ani-fadeOut"
+
+function clearButtonState() {
+    $( '.js-enter-button, .js-exit-button, .js-execute-button' ).removeClass('disabled');
+}
+
+
+$( document ).on( 'click', '.js-modal-enter-trigger', function( e ) {
+
+        if ( $( '.js-modal-target' ).hasClass('js-modal__is-closed') ) {
+
+            $( '.js-modal-target' ).removeClass(modalExitClasses);
+            $( '.js-modal-target' ).removeClass(modalExecuteClasses);
+            $( '.js-modal-target' ).addClass(modalEnterClasses);
+
+            $( '.js-overlay-target' ).removeClass(overlayExitClasses);
+            $( '.js-overlay-target' ).addClass(overlayEnterClasses);
+
+            clearButtonState();
+            $( '.js-enter-button' ).addClass('disabled');
+
+
+     };
+
+     e.preventDefault();
+
+} );
+
+
+$( document ).on( 'click', '.js-modal-exit-trigger', function( e ) {
+
+        if ( $( '.js-modal-target' ).hasClass('js-modal__is-open') ) {
+
+            $( '.js-modal-target' ).removeClass(modalEnterClasses);
+            $( '.js-modal-target' ).addClass(modalExitClasses);
+
+            $( '.js-overlay-target' ).removeClass(overlayEnterClasses);
+            $( '.js-overlay-target' ).addClass(overlayExitClasses);
+
+            clearButtonState();
+            $( '.js-exit-button' ).addClass('disabled');
+            $( '.js-execute-button' ).addClass('disabled');
+
+     };
+
+     e.preventDefault();
+
+} );
+
+$( document ).on( 'click', '.js-modal-execute-trigger', function( e ) {
+
+        if ( $( '.js-modal-target' ).hasClass('js-modal__is-open') ) {
+
+            $( '.js-modal-target' ).removeClass(modalEnterClasses);
+            $( '.js-modal-target' ).addClass(modalExecuteClasses);
+
+            $( '.js-overlay-target' ).removeClass(overlayEnterClasses);
+            $( '.js-overlay-target' ).addClass(overlayExitClasses);
+
+            clearButtonState();
+            $( '.js-exit-button' ).addClass('disabled');
+            $( '.js-execute-button' ).addClass('disabled');
+
+
+     };
+
+     e.preventDefault();
+
+} );

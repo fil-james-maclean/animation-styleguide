@@ -546,9 +546,14 @@ h6, .h6 {
     line-height: 28px;
     font-weight: normal; } }
 
+body,
 p, .p {
+  font-family: "neuzeit_grotesk", Arial, Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 26px; }
+  line-height: 26px;
+  color: #262626;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .text-line-1 {
   line-height: 1; }
@@ -2871,9 +2876,6 @@ p, .p {
 .modal {
   padding: 0;
   outline: none;
-  max-width: 600px;
-  margin: auto;
-  border: 1px solid #D9D9D9;
   /**
 * @include breakpoint( small only ) {
 *     top: 0 !important;
@@ -2896,18 +2898,43 @@ p, .p {
   padding-right: 118px;
   padding-left: 20px; }
 
+.reveal {
+  z-index: 1006;
+  border: 1px solid #cacaca;
+  background-color: #fefefe;
+  border-radius: 0;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto; }
+  @media screen and (min-width: 40em) {
+    .reveal {
+      width: 600px;
+      max-width: 75rem; } }
+
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100%; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
 body {
-  position: relative; }
+  position: relative;
+  min-height: 100%; }
+
+.demoContainer {
+  float: left;
+  width: 220px;
+  margin: 12px;
+  text-align: center;
+  background: #F7F7F7;
+  border: 1px solid #BFBFBF; }
 
 .demo-box {
-  width: 180px;
-  height: 180px; }
+  width: 100px;
+  height: 100px;
+  margin: auto; }
 
 .overlay {
   position: absolute;

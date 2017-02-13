@@ -34,14 +34,16 @@
 }
 
 
-
-
-
-
-
+body,
 p, .p {
+    font-family: $body-font-family;
     font-size: $base-font-size; line-height: $base-line-height;
+    color: $grey85;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+
 
 .text-line-1 {
     line-height: 1;

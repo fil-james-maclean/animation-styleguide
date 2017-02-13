@@ -22,17 +22,31 @@
 
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 body{
   position: relative;
+  min-height: 100%;
+}
+
+.demoContainer {
+  float: left;
+  width: 220px;
+  margin: 12px;
+  text-align: center;
+  background: $grey3;
+  border: 1px solid $grey25;
 }
 
 .demo-box {
-  width: 180px;
-  height: 180px;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+
+  // border-radius: 50%;
 }
 
 .overlay {
