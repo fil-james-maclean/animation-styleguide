@@ -45,7 +45,7 @@ $animation-perspective: 800px;
  */
 @for $i from 1 through 40 {
 
-   .fil-ani-delay-#{ $i * 100 } {
+   .delay-#{ $i * 100 } {
        animation-delay: #{ $i * 100 }ms;
    }
    //
@@ -53,7 +53,7 @@ $animation-perspective: 800px;
   //      animation-delay: #{ $i * 200 }ms;
   //  }
 
-   .fil-ani-dur-#{ $i * 100 } {
+   .dur-#{ $i * 100 } {
        animation-duration: #{ $i * 100 }ms;
    }
 
@@ -89,12 +89,12 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 
 
 // Entrances
-.fil-ani-is-hidden {
+.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
 // fadein
-@keyframes fil-ani-fadeIn {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -104,14 +104,14 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeIn {
-  animation-name: fil-ani-fadeIn;
+.fadeIn {
+  animation-name: fadeIn;
   animation-fill-mode: both;
   animation-timing-function: ease;
 }
 
 // fadein-scaleup
-@keyframes fil-ani-fadeInScaleUp {
+@keyframes fadeInScaleUp {
   from {
     opacity: 0;
     transform: translate3d(0, 20%, 0) scale(0.8, 0.8);
@@ -123,13 +123,13 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
   // transition: transform 300ms ease, opacity 200ms ease;
-.fil-ani-fadeInScaleUp {
-   animation-name: fil-ani-fadeInScaleUp;
+.fadeInScaleUp {
+   animation-name: fadeInScaleUp;
    animation-fill-mode: both;
    animation-timing-function: $easeout-back;
 }
 
-@keyframes fil-ani-fadeInScaleDown {
+@keyframes fadeInScaleDown {
   from {
     opacity: 0;
     transform: translate3d(0, -10%, 0) scale(1.1, 1.1);
@@ -141,15 +141,15 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
   // transition: transform 300ms ease, opacity 200ms ease;
-.fil-ani-fadeInScaleDown {
-   animation-name: fil-ani-fadeInScaleDown;
+.fadeInScaleDown {
+   animation-name: fadeInScaleDown;
    animation-fill-mode: both;
    animation-timing-function: $easeout-back;
 }
 
 // fadein-moveUp
 
-@keyframes fil-ani-fadeInUp {
+@keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translate3d(0, 20%, 0);
@@ -161,13 +161,13 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeInUp {
-  animation-name: fil-ani-fadeInUp;
+.fadeInUp {
+  animation-name: fadeInUp;
   animation-fill-mode: both;
   animation-timing-function: $easeout-back;
 }
 
-@keyframes fil-ani-fadeInDown {
+@keyframes fadeInDown {
   from {
     opacity: 0;
     transform: translate3d(0, -20%, 0);
@@ -179,8 +179,8 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeInDown {
-  animation-name: fil-ani-fadeInDown;
+.fadeInDown {
+  animation-name: fadeInDown;
   animation-fill-mode: both;
   animation-timing-function: $easeout-back;
 }
@@ -188,7 +188,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 
 // fadein-moveleft
 
-@keyframes fil-ani-fadeInLeft {
+@keyframes fadeInLeft {
   from {
     opacity: 0;
     transform: translate3d(-30%, 0, 0);
@@ -200,13 +200,13 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeInLeft {
-  animation-name: fil-ani-fadeInLeft;
+.fadeInLeft {
+  animation-name: fadeInLeft;
   animation-fill-mode: both;
   animation-timing-function: $easeout-back;
 }
 
-@keyframes fil-ani-fadeInRight {
+@keyframes fadeInRight {
   from {
     opacity: 0;
     transform: translate3d(30%, 0, 0);
@@ -218,13 +218,13 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeInRight {
-  animation-name: fil-ani-fadeInRight;
+.fadeInRight {
+  animation-name: fadeInRight;
   animation-fill-mode: both;
   animation-timing-function: $easeout-back;
 }
 
-@keyframes fil-ani-FlipUp90  {
+@keyframes FlipUp90  {
   from {
     // transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     transform: perspective($animation-perspective) translateY( 40% ) rotateX( -90deg );
@@ -238,18 +238,18 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
     opacity: 1;
   }
 }
-.fil-ani-parent-perspective {
+.parent-perspective {
   perspective: $animation-perspective;
 }
-.fil-ani-FlipUp90 {
+.FlipUp90 {
   backface-visibility: hidden !important;
-  animation-name: fil-ani-FlipUp90 ;
+  animation-name: FlipUp90 ;
   animation-timing-function: ease;
   animation-fill-mode: both;
 }
 
 
-@keyframes fil-ani-FlipDown90  {
+@keyframes FlipDown90  {
   from {
     // transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     transform: perspective($animation-perspective) translateY( -40% ) rotateX( 90deg );
@@ -263,12 +263,12 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
     opacity: 1;
   }
 }
-.fil-ani-parent-perspective {
+.parent-perspective {
   perspective: $animation-perspective;
 }
-.fil-ani-FlipDown90 {
+.FlipDown90 {
   backface-visibility: hidden !important;
-  animation-name: fil-ani-FlipDown90 ;
+  animation-name: FlipDown90 ;
   animation-timing-function: ease;
   animation-fill-mode: both;
   &.reverse {
@@ -280,7 +280,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 
 // Exits
 
-@keyframes fil-ani-fadeOut {
+@keyframes fadeOut {
   from {
     opacity: 1;
   }
@@ -290,14 +290,14 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeOut {
-  animation-name: fil-ani-fadeOut;
+.fadeOut {
+  animation-name: fadeOut;
   animation-fill-mode: both;
   animation-timing-function: ease;
 }
 
 
-@keyframes fil-ani-fadeOutScaleDown {
+@keyframes fadeOutScaleDown {
   from {
     opacity: 1;
     transform: none;
@@ -309,13 +309,13 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeOutScaleDown {
-   animation-name: fil-ani-fadeOutScaleDown;
+.fadeOutScaleDown {
+   animation-name: fadeOutScaleDown;
    animation-fill-mode: both;
    animation-timing-function: $back-easein;
 }
 
-@keyframes fil-ani-fadeOutScaleUp {
+@keyframes fadeOutScaleUp {
   from {
     opacity: 1;
     transform: none;
@@ -327,13 +327,13 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeOutScaleUp {
-   animation-name: fil-ani-fadeOutScaleUp;
+.fadeOutScaleUp {
+   animation-name: fadeOutScaleUp;
    animation-fill-mode: both;
    animation-timing-function: $back-easein;
 }
 
-@keyframes fil-ani-fadeOutUp {
+@keyframes fadeOutUp {
   from {
     opacity: 1;
     transform: none;
@@ -346,13 +346,13 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeOutUp {
-  animation-name: fil-ani-fadeOutUp;
+.fadeOutUp {
+  animation-name: fadeOutUp;
   animation-fill-mode: both;
   animation-timing-function: $back-easein;
 }
 
-@keyframes fil-ani-fadeOutDown {
+@keyframes fadeOutDown {
   from {
     opacity: 1;
     transform: none;
@@ -365,14 +365,14 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeOutDown {
-  animation-name: fil-ani-fadeOutDown;
+.fadeOutDown {
+  animation-name: fadeOutDown;
   animation-fill-mode: both;
   animation-timing-function: $back-easein;
 }
 
 
-@keyframes fil-ani-fadeOutLeft {
+@keyframes fadeOutLeft {
   from {
     opacity: 1;
     transform: none;
@@ -385,13 +385,13 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeOutLeft {
-  animation-name: fil-ani-fadeOutLeft;
+.fadeOutLeft {
+  animation-name: fadeOutLeft;
   animation-fill-mode: both;
   animation-timing-function: $back-easein;
 }
 
-@keyframes fil-ani-fadeOutRight {
+@keyframes fadeOutRight {
   from {
     opacity: 1;
     transform: none;
@@ -404,14 +404,14 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-fadeOutRight {
-  animation-name: fil-ani-fadeOutRight;
+.fadeOutRight {
+  animation-name: fadeOutRight;
   animation-fill-mode: both;
   animation-timing-function: $back-easein;
 }
 
 
-@keyframes fil-ani-FlipOutUp90  {
+@keyframes FlipOutUp90  {
   from {
 
     transform: perspective($animation-perspective) translateY( 0 ) rotateX( 0deg );
@@ -424,15 +424,15 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-FlipOutUp90 {
+.FlipOutUp90 {
   backface-visibility: hidden !important;
-  animation-name: fil-ani-FlipOutUp90 ;
+  animation-name: FlipOutUp90 ;
   animation-timing-function: ease;
   animation-fill-mode: both;
 }
 
 
-@keyframes fil-ani-FlipOutDown90  {
+@keyframes FlipOutDown90  {
   from {
     transform: perspective($animation-perspective) translateY( 0 ) rotateX( 0deg );
     opacity: 1;
@@ -444,12 +444,12 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
     opacity: 0;
   }
 }
-.fil-ani-parent-perspective {
+.parent-perspective {
   perspective: $animation-perspective;
 }
-.fil-ani-FlipOutDown90 {
+.FlipOutDown90 {
   backface-visibility: hidden !important;
-  animation-name: fil-ani-FlipOutDown90 ;
+  animation-name: FlipOutDown90 ;
   animation-timing-function: ease;
   animation-fill-mode: both;
 }
@@ -459,20 +459,20 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 * ====== Card Flip Execute =======
 */
 
-.fil-ani-container3d {
+.container3d {
   position: relative;
   perspective: $animation-perspective;
 }
 
-.fil-ani-card {
+.card {
   width: 100%;
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
 }
 
-.fil-ani-card--front,
-.fil-ani-card--back {
+.card--front,
+.card--back {
    margin: 0;
    display: block;
    position: absolute;
@@ -482,12 +482,12 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 
 }
 
-.fil-ani-card--back {
+.card--back {
   transform: rotateY( 180deg );
 
 }
 
-@keyframes fil-ani-FlipLeft180  {
+@keyframes FlipLeft180  {
   from {
     transform: translateZ( 0 ) translateX( 0 ) rotateY( 0deg );
   }
@@ -502,17 +502,17 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-parent-perspective {
+.parent-perspective {
   perspective: $animation-perspective;
 }
 
-.fil-ani-FlipLeft180 {
-  animation-name: fil-ani-FlipLeft180 ;
+.FlipLeft180 {
+  animation-name: FlipLeft180 ;
   animation-timing-function: linear;
   animation-fill-mode: both;
 }
 
-@keyframes fil-ani-FlipRight180  {
+@keyframes FlipRight180  {
   from {
     transform: translateZ( 0 ) translateX( 0 ) rotateY( -180deg );
   }
@@ -527,8 +527,8 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-FlipRight180 {
-  animation-name: fil-ani-FlipRight180 ;
+.FlipRight180 {
+  animation-name: FlipRight180 ;
   animation-timing-function: linear;
   animation-fill-mode: both;
 }
@@ -539,7 +539,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 * Enphasis
 */
 
-@keyframes fil-ani-PulseScale {
+@keyframes PulseScale {
   from {
     transform: scale3d(1, 1, 1);
   }
@@ -565,14 +565,14 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-PulseScale {
-  animation-name: fil-ani-PulseScale;
+.PulseScale {
+  animation-name: PulseScale;
   // animation-timing-function: linear;
   animation-fill-mode: both;
 }
 
 
-@keyframes fil-ani-PulseOutline {
+@keyframes PulseOutline {
 
   from {
     transform: scale3d(1, 1, 1);
@@ -654,13 +654,13 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 
 }
 
-.fil-ani-PulseOutline {
-  animation-name: fil-ani-PulseOutline;
+.PulseOutline {
+  animation-name: PulseOutline;
 
   animation-fill-mode: both;
 }
 
-@keyframes fil-ani-Shake {
+@keyframes Shake {
   from, to {
     transform: translate3d(0, 0, 0);
   }
@@ -674,14 +674,14 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.fil-ani-Shake {
-  animation-name: fil-ani-Shake;
+.Shake {
+  animation-name: Shake;
   animation-timing-function: linear;
   animation-fill-mode: both;
 }
 
 
-.fil-ani-Spotlight {
+.Spotlight {
   z-index: 50;
   position: relative;
   box-shadow: 0px 4px 40px 0px rgba(0,0,0,0.2);

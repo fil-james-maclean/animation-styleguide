@@ -1,80 +1,10 @@
 
 
-$( document ).on( 'click', '.js-fil-ani-fadeIn-trigger', function( e ) {
+$( document ).on( 'click', '.js-fadeIn-trigger', function( e ) {
 
-     $( '.js-fil-ani-fadeIn-target' ).each( function() {
+     $( '.js-fadeIn-target' ).each( function() {
 
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeIn fil-ani-is-hidden' );
-
-     } );
-
-     e.preventDefault();
-
- } );
-
-
-
-$( document ).on( 'click', '.js-fil-ani-fadeInScaleUp-trigger', function( e ) {
-
-    $( '.js-fil-ani-fadeInScaleUp-target' ).each( function() {
-
-         $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-fadeInScaleUp fil-ani-is-hidden' );
-
-    } );
-
-    e.preventDefault();
-
-} );
-
-
-
-$( document ).on( 'click', '.js-fil-ani-fadeInScaleDown-trigger', function( e ) {
-
-    $( '.js-fil-ani-fadeInScaleDown-target' ).each( function() {
-
-         $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-fadeInScaleDown fil-ani-is-hidden' );
-
-    } );
-
-    e.preventDefault();
-
-} );
-
-
-
-$( document ).on( 'click', '.js-fil-ani-fadeInUp-trigger', function( e ) {
-
-    $( '.js-fil-ani-fadeInUp-target' ).each( function() {
-
-         $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeInUp fil-ani-is-hidden' );
-
-    } );
-
-    e.preventDefault();
-
-} );
-
-
-
-$( document ).on( 'click', '.js-fil-ani-fadeInDown-trigger', function( e ) {
-
-    $( '.js-fil-ani-fadeInDown-target' ).each( function() {
-
-         $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeInDown fil-ani-is-hidden' );
-
-    } );
-
-    e.preventDefault();
-
-} );
-
-
-
-$( document ).on( 'click', '.js-fil-ani-fadeInLeft-trigger', function( e ) {
-
-     $( '.js-fil-ani-fadeInLeft-target' ).each( function() {
-
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeInLeft fil-ani-is-hidden' );
+          $( this ).toggleClass( 'delay-100 dur-300 fadeIn is-hidden' );
 
      } );
 
@@ -84,11 +14,81 @@ $( document ).on( 'click', '.js-fil-ani-fadeInLeft-trigger', function( e ) {
 
 
 
- $( document ).on( 'click', '.js-fil-ani-fadeInRight-trigger', function( e ) {
+$( document ).on( 'click', '.js-fadeInScaleUp-trigger', function( e ) {
 
-      $( '.js-fil-ani-fadeInRight-target' ).each( function() {
+    $( '.js-fadeInScaleUp-target' ).each( function() {
 
-           $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeInRight fil-ani-is-hidden' );
+         $( this ).toggleClass( 'delay-100 dur-500 fadeInScaleUp is-hidden' );
+
+    } );
+
+    e.preventDefault();
+
+} );
+
+
+
+$( document ).on( 'click', '.js-fadeInScaleDown-trigger', function( e ) {
+
+    $( '.js-fadeInScaleDown-target' ).each( function() {
+
+         $( this ).toggleClass( 'delay-100 dur-500 fadeInScaleDown is-hidden' );
+
+    } );
+
+    e.preventDefault();
+
+} );
+
+
+
+$( document ).on( 'click', '.js-fadeInUp-trigger', function( e ) {
+
+    $( '.js-fadeInUp-target' ).each( function() {
+
+         $( this ).toggleClass( 'delay-100 dur-300 fadeInUp is-hidden' );
+
+    } );
+
+    e.preventDefault();
+
+} );
+
+
+
+$( document ).on( 'click', '.js-fadeInDown-trigger', function( e ) {
+
+    $( '.js-fadeInDown-target' ).each( function() {
+
+         $( this ).toggleClass( 'delay-100 dur-300 fadeInDown is-hidden' );
+
+    } );
+
+    e.preventDefault();
+
+} );
+
+
+
+$( document ).on( 'click', '.js-fadeInLeft-trigger', function( e ) {
+
+     $( '.js-fadeInLeft-target' ).each( function() {
+
+          $( this ).toggleClass( 'delay-100 dur-300 fadeInLeft is-hidden' );
+
+     } );
+
+     e.preventDefault();
+
+ } );
+
+
+
+ $( document ).on( 'click', '.js-fadeInRight-trigger', function( e ) {
+
+      $( '.js-fadeInRight-target' ).each( function() {
+
+           $( this ).toggleClass( 'delay-100 dur-300 fadeInRight is-hidden' );
 
       } );
 
@@ -97,24 +97,11 @@ $( document ).on( 'click', '.js-fil-ani-fadeInLeft-trigger', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-fil-ani-FlipUp90-trigger', function( e ) {
+$( document ).on( 'click', '.js-FlipUp90-trigger', function( e ) {
 
-     $( '.js-fil-ani-FlipUp90-target' ).each( function() {
+     $( '.js-FlipUp90-target' ).each( function() {
 
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-FlipUp90  fil-ani-is-hidden' );
-
-     } );
-
-     e.preventDefault();
-
-} );
-
-
-$( document ).on( 'click', '.js-fil-ani-FlipDown90-trigger', function( e ) {
-
-     $( '.js-fil-ani-FlipDown90-target' ).each( function() {
-
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-FlipDown90  fil-ani-is-hidden' );
+          $( this ).toggleClass( 'delay-100 dur-500 FlipUp90  is-hidden' );
 
      } );
 
@@ -123,11 +110,24 @@ $( document ).on( 'click', '.js-fil-ani-FlipDown90-trigger', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-fil-ani-fadeOut-trigger', function( e ) {
+$( document ).on( 'click', '.js-FlipDown90-trigger', function( e ) {
 
-     $( '.js-fil-ani-fadeOut-target' ).each( function() {
+     $( '.js-FlipDown90-target' ).each( function() {
 
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOut fil-ani-is-hidden' );
+          $( this ).toggleClass( 'delay-100 dur-500 FlipDown90  is-hidden' );
+
+     } );
+
+     e.preventDefault();
+
+} );
+
+
+$( document ).on( 'click', '.js-fadeOut-trigger', function( e ) {
+
+     $( '.js-fadeOut-target' ).each( function() {
+
+          $( this ).toggleClass( 'delay-100 dur-300 fadeOut is-hidden' );
 
      } );
 
@@ -136,24 +136,11 @@ $( document ).on( 'click', '.js-fil-ani-fadeOut-trigger', function( e ) {
  } );
 
 
-$( document ).on( 'click', '.js-fil-ani-fadeOutScaleDown-trigger', function( e ) {
+$( document ).on( 'click', '.js-fadeOutScaleDown-trigger', function( e ) {
 
-  $( '.js-fil-ani-fadeOutScaleDown-target' ).each( function() {
+  $( '.js-fadeOutScaleDown-target' ).each( function() {
 
-       $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutScaleDown fil-ani-is-hidden' );
-
-  } );
-
-  e.preventDefault();
-
-} );
-
-
-$( document ).on( 'click', '.js-fil-ani-fadeOutScaleUp-trigger', function( e ) {
-
-  $( '.js-fil-ani-fadeOutScaleUp-target' ).each( function() {
-
-       $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutScaleUp fil-ani-is-hidden' );
+       $( this ).toggleClass( 'delay-100 dur-300 fadeOutScaleDown is-hidden' );
 
   } );
 
@@ -162,24 +149,11 @@ $( document ).on( 'click', '.js-fil-ani-fadeOutScaleUp-trigger', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-fil-ani-fadeOutUp-trigger', function( e ) {
+$( document ).on( 'click', '.js-fadeOutScaleUp-trigger', function( e ) {
 
-  $( '.js-fil-ani-fadeOutUp-target' ).each( function() {
+  $( '.js-fadeOutScaleUp-target' ).each( function() {
 
-       $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutUp fil-ani-is-hidden' );
-
-  } );
-
-  e.preventDefault();
-
-} );
-
-
-$( document ).on( 'click', '.js-fil-ani-fadeOutDown-trigger', function( e ) {
-
-  $( '.js-fil-ani-fadeOutDown-target' ).each( function() {
-
-       $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutDown fil-ani-is-hidden' );
+       $( this ).toggleClass( 'delay-100 dur-300 fadeOutScaleUp is-hidden' );
 
   } );
 
@@ -188,12 +162,38 @@ $( document ).on( 'click', '.js-fil-ani-fadeOutDown-trigger', function( e ) {
 } );
 
 
+$( document ).on( 'click', '.js-fadeOutUp-trigger', function( e ) {
 
-$( document ).on( 'click', '.js-fil-ani-fadeOutLeft-trigger', function( e ) {
+  $( '.js-fadeOutUp-target' ).each( function() {
 
-     $( '.js-fil-ani-fadeOutLeft-target' ).each( function() {
+       $( this ).toggleClass( 'delay-100 dur-300 fadeOutUp is-hidden' );
 
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutLeft fil-ani-is-hidden' );
+  } );
+
+  e.preventDefault();
+
+} );
+
+
+$( document ).on( 'click', '.js-fadeOutDown-trigger', function( e ) {
+
+  $( '.js-fadeOutDown-target' ).each( function() {
+
+       $( this ).toggleClass( 'delay-100 dur-300 fadeOutDown is-hidden' );
+
+  } );
+
+  e.preventDefault();
+
+} );
+
+
+
+$( document ).on( 'click', '.js-fadeOutLeft-trigger', function( e ) {
+
+     $( '.js-fadeOutLeft-target' ).each( function() {
+
+          $( this ).toggleClass( 'delay-100 dur-300 fadeOutLeft is-hidden' );
 
      } );
 
@@ -203,25 +203,11 @@ $( document ).on( 'click', '.js-fil-ani-fadeOutLeft-trigger', function( e ) {
 
 
 
-$( document ).on( 'click', '.js-fil-ani-fadeOutRight-trigger', function( e ) {
+$( document ).on( 'click', '.js-fadeOutRight-trigger', function( e ) {
 
-     $( '.js-fil-ani-fadeOutRight-target' ).each( function() {
+     $( '.js-fadeOutRight-target' ).each( function() {
 
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutRight fil-ani-is-hidden' );
-
-     } );
-
-     e.preventDefault();
-
-} );
-
-
-
-$( document ).on( 'click', '.js-fil-ani-FlipOutUp90-trigger', function( e ) {
-
-     $( '.js-fil-ani-FlipOutUp90-target' ).each( function() {
-
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-FlipOutUp90 fil-ani-is-hidden' );
+          $( this ).toggleClass( 'delay-100 dur-300 fadeOutRight is-hidden' );
 
      } );
 
@@ -230,11 +216,12 @@ $( document ).on( 'click', '.js-fil-ani-FlipOutUp90-trigger', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-fil-ani-FlipOutDown90-trigger', function( e ) {
 
-     $( '.js-fil-ani-FlipOutDown90-target' ).each( function() {
+$( document ).on( 'click', '.js-FlipOutUp90-trigger', function( e ) {
 
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-FlipOutDown90 fil-ani-is-hidden' );
+     $( '.js-FlipOutUp90-target' ).each( function() {
+
+          $( this ).toggleClass( 'delay-100 dur-500 FlipOutUp90 is-hidden' );
 
      } );
 
@@ -243,16 +230,29 @@ $( document ).on( 'click', '.js-fil-ani-FlipOutDown90-trigger', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-fil-ani-FlipLeft180-trigger', function( e ) {
+$( document ).on( 'click', '.js-FlipOutDown90-trigger', function( e ) {
 
-     $( '.js-fil-ani-FlipLeft180-target' ).each( function() {
+     $( '.js-FlipOutDown90-target' ).each( function() {
 
-         if ( $( this ).hasClass( 'fil-ani-card__flipped' ) ) {
-              $( this ).removeClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-FlipLeft180 fil-ani-card__flipped' );
-              $( this ).addClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-FlipRight180' );
+          $( this ).toggleClass( 'delay-100 dur-500 FlipOutDown90 is-hidden' );
+
+     } );
+
+     e.preventDefault();
+
+} );
+
+
+$( document ).on( 'click', '.js-FlipLeft180-trigger', function( e ) {
+
+     $( '.js-FlipLeft180-target' ).each( function() {
+
+         if ( $( this ).hasClass( 'card__flipped' ) ) {
+              $( this ).removeClass( 'delay-100 dur-500 FlipLeft180 card__flipped' );
+              $( this ).addClass( 'delay-100 dur-500 FlipRight180' );
          } else {
-             $( this ).removeClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-FlipRight180' );
-             $( this ).addClass( 'fil-ani-delay-100 fil-ani-dur-500 fil-ani-FlipLeft180 fil-ani-card__flipped' );
+             $( this ).removeClass( 'delay-100 dur-500 FlipRight180' );
+             $( this ).addClass( 'delay-100 dur-500 FlipLeft180 card__flipped' );
          }
      } );
 
@@ -262,25 +262,11 @@ $( document ).on( 'click', '.js-fil-ani-FlipLeft180-trigger', function( e ) {
 
 
 
-$( document ).on( 'click', '.js-fil-ani-PulseScale-trigger', function( e ) {
+$( document ).on( 'click', '.js-PulseScale-trigger', function( e ) {
 
-     $( '.js-fil-ani-PulseScale-target' ).each( function() {
+     $( '.js-PulseScale-target' ).each( function() {
 
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-1000 fil-ani-PulseScale' );
-
-     } );
-
-     e.preventDefault();
-
-} );
-
-
-
-$( document ).on( 'click', '.js-fil-ani-PulseOutline-trigger', function( e ) {
-
-     $( '.js-fil-ani-PulseOutline-target' ).each( function() {
-
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-300 fil-ani-PulseOutline' );
+          $( this ).toggleClass( 'delay-100 dur-1000 PulseScale' );
 
      } );
 
@@ -289,11 +275,25 @@ $( document ).on( 'click', '.js-fil-ani-PulseOutline-trigger', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-fil-ani-Shake-trigger', function( e ) {
 
-     $( '.js-fil-ani-Shake-target' ).each( function() {
+$( document ).on( 'click', '.js-PulseOutline-trigger', function( e ) {
 
-          $( this ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-1200 fil-ani-Shake' );
+     $( '.js-PulseOutline-target' ).each( function() {
+
+          $( this ).toggleClass( 'delay-100 dur-300 PulseOutline' );
+
+     } );
+
+     e.preventDefault();
+
+} );
+
+
+$( document ).on( 'click', '.js-Shake-trigger', function( e ) {
+
+     $( '.js-Shake-target' ).each( function() {
+
+          $( this ).toggleClass( 'delay-100 dur-1200 Shake' );
 
      } );
 
@@ -302,12 +302,12 @@ $( document ).on( 'click', '.js-fil-ani-Shake-trigger', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-fil-ani-Spotlight-trigger', function( e ) {
+$( document ).on( 'click', '.js-Spotlight-trigger', function( e ) {
 
-     $( '.js-fil-ani-Spotlight-target' ).each( function() {
+     $( '.js-Spotlight-target' ).each( function() {
 
-          $( this ).toggleClass( 'fil-ani-Spotlight' );
-          $( '.js-overlay-target' ).toggleClass( 'fil-ani-delay-100 fil-ani-dur-400 fil-ani-fadeIn' );
+          $( this ).toggleClass( 'Spotlight' );
+          $( '.js-overlay-target' ).toggleClass( 'delay-100 dur-400 fadeIn' );
 
      } );
 
@@ -315,77 +315,93 @@ $( document ).on( 'click', '.js-fil-ani-Spotlight-trigger', function( e ) {
 
 } );
 
-var modalEnterClasses = "fil-ani-delay-100 fil-ani-dur-500 fil-ani-fadeInScaleUp js-modal__is-open"
-var modalExitClasses = "fil-ani-is-hidden fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOutScaleDown js-modal__is-closed"
-var modalExecuteClasses = "fil-ani-is-hidden fil-ani-delay-100 fil-ani-dur-300 fil-ani-fadeOut js-modal__is-closed"
 
-var overlayEnterClasses = "fil-ani-dur-400 fil-ani-fadeIn"
-var overlayExitClasses = "fil-ani-dur-200 fil-ani-fadeOut"
+/* Modal Animations */
+
+var $modal = $( '.js-modal-target' );
+var $overlay = $( '.js-overlay-target' );
+
+var modalEnterClasses = "delay-100 dur-500 fadeInScaleUp js-modal__is-open"
+var modalExitClasses = "is-hidden delay-100 dur-300 fadeOutScaleDown js-modal__is-closed"
+var modalExecuteClasses = "is-hidden delay-100 dur-300 fadeOutRight js-modal__is-closed"
+
+var overlayEnterClasses = "dur-400 fadeIn"
+var overlayExitClasses = "dur-200 fadeOut"
 
 function clearButtonState() {
     $( '.js-enter-button, .js-exit-button, .js-execute-button' ).removeClass('disabled');
 }
 
+function disableButton( $sel ) {
+    $( $sel ).addClass( 'disabled' );
+}
 
-$( document ).on( 'click', '.js-modal-enter-trigger', function( e ) {
+// function disableButton2( $sel, fN ) {
+//     $( $sel ).addClass( 'disabled' );
+//     fN == false ? console.log('no functions called') : fN();
+// }
+//
+// disableButton2( '.myThing', clearButtonState );
 
-        if ( $( '.js-modal-target' ).hasClass('js-modal__is-closed') ) {
+function enableButton( $sel ) {
+    $( $sel ).removeClass( 'disabled' );
+}
 
-            $( '.js-modal-target' ).removeClass(modalExitClasses);
-            $( '.js-modal-target' ).removeClass(modalExecuteClasses);
-            $( '.js-modal-target' ).addClass(modalEnterClasses);
+/*
+Function to control the entrance animation of the modal
+*/
+function enterModal() {
+    $modal.removeClass(modalExitClasses);
+    $modal.removeClass(modalExecuteClasses);
+    $modal.addClass(modalEnterClasses);
 
-            $( '.js-overlay-target' ).removeClass(overlayExitClasses);
-            $( '.js-overlay-target' ).addClass(overlayEnterClasses);
+    $overlay.removeClass(overlayExitClasses);
+    $overlay.addClass(overlayEnterClasses);
 
-            clearButtonState();
-            $( '.js-enter-button' ).addClass('disabled');
+    clearButtonState();
+    disableButton( '.js-enter-button' );
+}
 
+/*
+Function to control the exit animation of the modal
+*/
+function exitModal() {
+    $modal.removeClass(modalEnterClasses);
+    $modal.addClass(modalExitClasses);
 
-     };
+    $overlay.removeClass(overlayEnterClasses);
+    $overlay.addClass(overlayExitClasses);
 
-     e.preventDefault();
+    clearButtonState();
+    disableButton( '.js-exit-button, .js-execute-button' );
+}
 
+/*
+Function to control the execution animation of the modal
+*/
+function executeModal() {
+    $modal.removeClass(modalEnterClasses);
+    $modal.addClass(modalExecuteClasses);
+
+    $overlay.removeClass(overlayEnterClasses);
+    $overlay.addClass(overlayExitClasses);
+
+    clearButtonState();
+    disableButton( '.js-exit-button, .js-execute-button' );
+}
+
+/* button handlers */
+$( document ).on( 'click', '.js-modal-enter-trigger', function( event ) {
+    $( '.js-modal-target' ).hasClass('js-modal__is-closed') ? enterModal() : false;
+    event.preventDefault();
 } );
 
-
-$( document ).on( 'click', '.js-modal-exit-trigger', function( e ) {
-
-        if ( $( '.js-modal-target' ).hasClass('js-modal__is-open') ) {
-
-            $( '.js-modal-target' ).removeClass(modalEnterClasses);
-            $( '.js-modal-target' ).addClass(modalExitClasses);
-
-            $( '.js-overlay-target' ).removeClass(overlayEnterClasses);
-            $( '.js-overlay-target' ).addClass(overlayExitClasses);
-
-            clearButtonState();
-            $( '.js-exit-button' ).addClass('disabled');
-            $( '.js-execute-button' ).addClass('disabled');
-
-     };
-
-     e.preventDefault();
-
+$( document ).on( 'click', '.js-modal-exit-trigger', function( event ) {
+    $( '.js-modal-target' ).hasClass('js-modal__is-open') ? exitModal() : false;
+    event.preventDefault();
 } );
 
 $( document ).on( 'click', '.js-modal-execute-trigger', function( e ) {
-
-        if ( $( '.js-modal-target' ).hasClass('js-modal__is-open') ) {
-
-            $( '.js-modal-target' ).removeClass(modalEnterClasses);
-            $( '.js-modal-target' ).addClass(modalExecuteClasses);
-
-            $( '.js-overlay-target' ).removeClass(overlayEnterClasses);
-            $( '.js-overlay-target' ).addClass(overlayExitClasses);
-
-            clearButtonState();
-            $( '.js-exit-button' ).addClass('disabled');
-            $( '.js-execute-button' ).addClass('disabled');
-
-
-     };
-
+     $( '.js-modal-target' ).hasClass('js-modal__is-open') ? executeModal() : false;
      e.preventDefault();
-
 } );
