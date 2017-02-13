@@ -351,12 +351,12 @@ function enableButton( $sel ) {
 Function to control the entrance animation of the modal
 */
 function enterModal() {
-    findModal.removeClass(modalExitClasses);
-    findModal.removeClass(modalExecuteClasses);
-    findModal.addClass(modalEnterClasses);
+    $( '.js-modal-target' ).removeClass(modalExitClasses);
+    $( '.js-modal-target' ).removeClass(modalExecuteClasses);
+    $( '.js-modal-target' ).addClass(modalEnterClasses);
 
-    findOverlay.removeClass(overlayExitClasses);
-    findOverlay.addClass(overlayEnterClasses);
+    $( '.js-overlay-target' ).removeClass(overlayExitClasses);
+    $( '.js-overlay-target' ).addClass(overlayEnterClasses);
 
     clearButtonState();
     disableButton( '.js-enter-button' );
@@ -366,11 +366,11 @@ function enterModal() {
 Function to control the exit animation of the modal
 */
 function exitModal() {
-    findModal.removeClass(modalEnterClasses);
-    findModal.addClass(modalExitClasses);
+    $( '.js-modal-target' ).removeClass(modalEnterClasses);
+    $( '.js-modal-target' ).addClass(modalExitClasses);
 
-    findOverlay.removeClass(overlayEnterClasses);
-    findOverlay.addClass(overlayExitClasses);
+    $( '.js-overlay-target' ).removeClass(overlayEnterClasses);
+    $( '.js-overlay-target' ).addClass(overlayExitClasses);
 
     clearButtonState();
     disableButton( '.js-exit-button, .js-execute-button' );
@@ -380,11 +380,11 @@ function exitModal() {
 Function to control the execution animation of the modal
 */
 function executeModal() {
-    findModal.removeClass(modalEnterClasses);
-    findModal.addClass(modalExecuteClasses);
+    $( '.js-modal-target' ).removeClass(modalEnterClasses);
+    $( '.js-modal-target' ).addClass(modalExecuteClasses);
 
-    findOverlay.removeClass(overlayEnterClasses);
-    findOverlay.addClass(overlayExitClasses);
+    $( '.js-overlay-target' ).removeClass(overlayEnterClasses);
+    $( '.js-overlay-target' ).addClass(overlayExitClasses);
 
     clearButtonState();
     disableButton( '.js-exit-button, .js-execute-button' );
