@@ -318,8 +318,8 @@ $( document ).on( 'click', '.js-Spotlight-trigger', function( e ) {
 
 /* Modal Animations */
 
-var $modal = $( '.js-modal-target' );
-var $overlay = $( '.js-overlay-target' );
+var findModal = $( '.js-modal-target' );
+var findOverlay = $( '.js-overlay-target' );
 
 var modalEnterClasses = "delay-100 dur-500 fadeInScaleUp js-modal__is-open"
 var modalExitClasses = "is-hidden delay-100 dur-300 fadeOutScaleDown js-modal__is-closed"
@@ -351,12 +351,12 @@ function enableButton( $sel ) {
 Function to control the entrance animation of the modal
 */
 function enterModal() {
-    $modal.removeClass(modalExitClasses);
-    $modal.removeClass(modalExecuteClasses);
-    $modal.addClass(modalEnterClasses);
+    findModal.removeClass(modalExitClasses);
+    findModal.removeClass(modalExecuteClasses);
+    findModal.addClass(modalEnterClasses);
 
-    $overlay.removeClass(overlayExitClasses);
-    $overlay.addClass(overlayEnterClasses);
+    findOverlay.removeClass(overlayExitClasses);
+    findOverlay.addClass(overlayEnterClasses);
 
     clearButtonState();
     disableButton( '.js-enter-button' );
@@ -366,11 +366,11 @@ function enterModal() {
 Function to control the exit animation of the modal
 */
 function exitModal() {
-    $modal.removeClass(modalEnterClasses);
-    $modal.addClass(modalExitClasses);
+    findModal.removeClass(modalEnterClasses);
+    findModal.addClass(modalExitClasses);
 
-    $overlay.removeClass(overlayEnterClasses);
-    $overlay.addClass(overlayExitClasses);
+    findOverlay.removeClass(overlayEnterClasses);
+    findOverlay.addClass(overlayExitClasses);
 
     clearButtonState();
     disableButton( '.js-exit-button, .js-execute-button' );
@@ -380,11 +380,11 @@ function exitModal() {
 Function to control the execution animation of the modal
 */
 function executeModal() {
-    $modal.removeClass(modalEnterClasses);
-    $modal.addClass(modalExecuteClasses);
+    findModal.removeClass(modalEnterClasses);
+    findModal.addClass(modalExecuteClasses);
 
-    $overlay.removeClass(overlayEnterClasses);
-    $overlay.addClass(overlayExitClasses);
+    findOverlay.removeClass(overlayEnterClasses);
+    findOverlay.addClass(overlayExitClasses);
 
     clearButtonState();
     disableButton( '.js-exit-button, .js-execute-button' );
