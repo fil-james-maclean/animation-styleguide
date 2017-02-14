@@ -317,16 +317,16 @@ $( document ).on( 'click', '.js-Spotlight-trigger', function( e ) {
 
 
 /* Modal Animations */
-
+;(function( $ ){
 var findModal = $( '.js-modal-target' );
 var findOverlay = $( '.js-overlay-target' );
 
 var modalEnterClasses = "delay-100 dur-500 fadeInScaleUp js-modal__is-open"
-var modalExitClasses = "is-hidden delay-100 dur-300 fadeOutScaleDown js-modal__is-closed"
-var modalExecuteClasses = "is-hidden delay-100 dur-300 fadeOutRight js-modal__is-closed"
+var modalExitClasses = "is-hidden delay-100 dur-400 fadeOutScaleDown js-modal__is-closed"
+var modalExecuteClasses = "is-hidden delay-100 dur-400 fadeOutRight js-modal__is-closed"
 
-var overlayEnterClasses = "dur-400 fadeIn"
-var overlayExitClasses = "dur-200 fadeOut"
+var overlayEnterClasses = "delay-200 dur-400 fadeIn"
+var overlayExitClasses = "delay-400 dur-200 fadeOut"
 
 function clearButtonState() {
     $( '.js-enter-button, .js-exit-button, .js-execute-button' ).removeClass('disabled');
@@ -405,3 +405,5 @@ $( document ).on( 'click', '.js-modal-execute-trigger', function( e ) {
      $( '.js-modal-target' ).hasClass('js-modal__is-open') ? executeModal() : false;
      e.preventDefault();
 } );
+
+})( jQuery ); // close IIFE

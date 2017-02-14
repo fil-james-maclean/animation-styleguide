@@ -45,7 +45,6 @@ body{
   width: 100px;
   height: 100px;
   margin: auto;
-
   // border-radius: 50%;
 }
 .demoButtons {
@@ -63,5 +62,5 @@ body{
 }
 
 .overlay__dark {
-    background-color: rgba($grey85,0.9);
+    background-color: rgba($grey85, 0.4);
 }
