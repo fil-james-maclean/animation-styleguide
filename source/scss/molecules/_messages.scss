@@ -1,0 +1,195 @@
+.msg--txt {
+    font-family: $web-safe-font;
+    color: $grey85;
+    font-size: 12px;
+}
+
+.msg--txt__list {
+    min-width: 18em;
+    margin-bottom: 0.5em;
+}
+
+
+$toast-icon-box-size: 66px;
+
+.msg {
+    cursor: help;
+    position: relative;
+    &:before {
+      @extend %icon-font;
+      position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+      text-align: center;
+    }
+    // .msg--txt {
+    //   display: block;
+    // }
+}
+
+
+$tooltip-icon-box-size: 36px;
+
+
+.msg__toast {
+    padding: 12px 20px;
+    border-left: $toast-icon-box-size solid;
+    min-height: $toast-icon-box-size;
+    &:before {
+      left: -#{$toast-icon-box-size};
+      width: $toast-icon-box-size;
+      font-size: 30px;
+    }
+
+    .msg--txt {
+        color: $white;
+        line-height: 18px;
+        // display: block;
+    }
+
+    .msg--txt__title {
+        font-size: 15px;
+        display: block;
+    }
+    .msg--txt__sub {
+        font-size: 12px;
+        color: $grey25;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+    .msg--txt__body {
+        font-size: 12px;
+        display: block;
+    }
+    .msg--txt__btns {
+        margin-top: 12px;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+}
+
+.msg.msg__toast {
+    background: rgba($grey85, 0.95);
+}
+
+.msg__tooltip {
+    padding: 4px 8px;
+    border-left: $tooltip-icon-box-size solid;
+    min-height: $tooltip-icon-box-size;
+    &:before {
+      left: -#{$tooltip-icon-box-size};
+      width: $tooltip-icon-box-size;
+      font-size: 24px;
+    }
+}
+
+.msg__shadow {
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.2);
+}
+
+
+.msg__tooltip {
+
+    &.msg--triangle-arrow:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-style: solid;
+        border-width: 6px;
+    }
+
+    &.msg--triangle-arrow__top:after {
+        top: -12px;
+        left: 12px - $tooltip-icon-box-size;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        // border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    &.msg--triangle-arrow__bottom:after {
+        bottom: -12px;
+        left: 12px - $tooltip-icon-box-size;
+        // border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    &.msg--triangle-arrow__left:after {
+        top: 12px;
+        left: -12px - $tooltip-icon-box-size;
+        border-top-color: transparent;
+        // border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    &.msg--triangle-arrow__right:after {
+        top: 12px;
+        right: -12px;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        // border-left-color: transparent;
+    }
+
+}
+.msg__confirm {
+    background: #d6ebcc; /*$green1 20%tint*/
+    background: mix($green1, $white, 20%);
+    border-color: $green1;
+    &:before {
+      @extend %icon-circle-tick;
+      color: $white;
+    }
+    &:after {
+      border-color: $green1;
+    }
+}
+
+
+.msg__info {
+    background: mix($blue1, $white, 20%);
+    border-color: $blue1;
+    &:before {
+      @extend %icon-info-circle;
+      color: $white;
+    }
+    &:after {
+      border-color: $blue1;
+    }
+}
+
+.msg__warning {
+    background: mix($yellow1, $white, 20%);
+    border-color: $yellow1;
+    &:before {
+      @extend %icon-warning-triangle-filled;
+      color: $black;
+    }
+    &:after {
+      border-color: $yellow1;
+    }
+}
+
+.msg__error {
+    background: mix($red1, $white, 20%);
+    border-color: $red1;
+    &:before {
+      @extend %icon-warning-circle-filled;
+      color: $white;
+    }
+    &:after {
+      border-color: $red1;
+    }
+}
+
+
+.msg--txt {
+    font-family: $web-safe-font;
+    color: $grey85;
+    font-size: 12px;
+}

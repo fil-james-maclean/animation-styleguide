@@ -1262,7 +1262,7 @@ p, .p {
   font-weight: normal;
   font-style: normal; }
 
-.icon--after:after, .text-link-cta:after,
+.icon--after:after, .text-link-cta:after, .msg:before,
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   display: inline-block;
@@ -1511,13 +1511,15 @@ p, .p {
 .icon-watchlist:before {
   content: ""; }
 
-.icon-circle-tick:before {
+.icon-circle-tick:before,
+.msg__confirm:before {
   content: ""; }
 
 .icon-confirm:before {
   content: ""; }
 
-.icon-info-circle:before {
+.icon-info-circle:before,
+.msg__info:before {
   content: ""; }
 
 .icon-info:before {
@@ -1541,13 +1543,15 @@ p, .p {
 .icon-menu:before {
   content: ""; }
 
-.icon-warning-triangle-filled:before {
+.icon-warning-triangle-filled:before,
+.msg__warning:before {
   content: ""; }
 
 .icon-warning:before {
   content: ""; }
 
-.icon-warning-circle-filled:before {
+.icon-warning-circle-filled:before,
+.msg__error:before {
   content: ""; }
 
 .icon-error:before {
@@ -2911,6 +2915,145 @@ p, .p {
     .reveal {
       width: 600px;
       max-width: 75rem; } }
+
+.msg--txt {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #262626;
+  font-size: 12px; }
+
+.msg--txt__list {
+  min-width: 18em;
+  margin-bottom: 0.5em; }
+
+.msg {
+  cursor: help;
+  position: relative; }
+  .msg:before {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    text-align: center; }
+
+.msg__toast {
+  padding: 12px 20px;
+  border-left: 66px solid;
+  min-height: 66px; }
+  .msg__toast:before {
+    left: -66px;
+    width: 66px;
+    font-size: 30px; }
+  .msg__toast .msg--txt {
+    color: #FFFFFF;
+    line-height: 18px; }
+  .msg__toast .msg--txt__title {
+    font-size: 15px;
+    display: block; }
+  .msg__toast .msg--txt__sub {
+    font-size: 12px;
+    color: #BFBFBF;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%; }
+  .msg__toast .msg--txt__body {
+    font-size: 12px;
+    display: block; }
+  .msg__toast .msg--txt__btns {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    display: block; }
+
+.msg.msg__toast {
+  background: rgba(38, 38, 38, 0.95); }
+
+.msg__tooltip {
+  padding: 4px 8px;
+  border-left: 36px solid;
+  min-height: 36px; }
+  .msg__tooltip:before {
+    left: -36px;
+    width: 36px;
+    font-size: 24px; }
+
+.msg__shadow {
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.2); }
+
+.msg__tooltip.msg--triangle-arrow:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 6px; }
+
+.msg__tooltip.msg--triangle-arrow__top:after {
+  top: -12px;
+  left: -24px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent; }
+
+.msg__tooltip.msg--triangle-arrow__bottom:after {
+  bottom: -12px;
+  left: -24px;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent; }
+
+.msg__tooltip.msg--triangle-arrow__left:after {
+  top: 12px;
+  left: -48px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent; }
+
+.msg__tooltip.msg--triangle-arrow__right:after {
+  top: 12px;
+  right: -12px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent; }
+
+.msg__confirm {
+  background: #d6ebcc;
+  /*$green1 20%tint*/
+  background: #d6ebcc;
+  border-color: #339900; }
+  .msg__confirm:before {
+    color: #FFFFFF; }
+  .msg__confirm:after {
+    border-color: #339900; }
+
+.msg__info {
+  background: #ccdfe9;
+  border-color: #006193; }
+  .msg__info:before {
+    color: #FFFFFF; }
+  .msg__info:after {
+    border-color: #006193; }
+
+.msg__warning {
+  background: #fcf6cc;
+  border-color: #F0D202; }
+  .msg__warning:before {
+    color: #000000; }
+  .msg__warning:after {
+    border-color: #F0D202; }
+
+.msg__error {
+  background: #f5d6d6;
+  border-color: #CC3333; }
+  .msg__error:before {
+    color: #FFFFFF; }
+  .msg__error:after {
+    border-color: #CC3333; }
+
+.msg--txt {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #262626;
+  font-size: 12px; }
 
 html {
   box-sizing: border-box;
