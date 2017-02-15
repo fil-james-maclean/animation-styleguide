@@ -3,13 +3,29 @@
 {% block content %}
 
 
-<div class="gutted">
+<div class="gutted rhythmic">
 
-    <div class="rhythmic-m msg msg__toast msg__info">
-        <span class="msg--txt">You have been logged out after 5 minutes of inactivity.</span>
+    <div class="rhythmic-m msg msg__toast msg__confirm  is-hidden  js-toast-target  js-toast__is-closed">
+
+        <span class="msg--txt  msg--txt__title">
+            <strong>Added investment to Table</strong>
+        </span>
+
+        <span class="msg--txt  msg--txt__body">ISDL Europe hydro.</span>
+
+        <div class="msg--txt__btns">
+            <a href="" class="btn  btn-tertiary  btn--small  js-scrollToTable">Show table</a>
+        </div>
+
     </div>
 
 </div>
 
+
+<div class="text-center demoButtons rhythmic">
+    <a class="btn  btn-tertiary  js-enter-button js-toast-enter-trigger">Enter</a>
+    <a class="btn  btn-tertiary  js-exit-button  disabled  js-toast-exit-trigger">Exit</a>
+    <a class="btn  btn-tertiary  js-emphasis-button disabled  js-toast-emphasis-trigger">Emphasis</a>
+</div>
 
 {% endblock %}

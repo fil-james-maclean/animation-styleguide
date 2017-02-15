@@ -35,6 +35,7 @@ $tooltip-icon-box-size: 36px;
     padding: 12px 20px;
     border-left: $toast-icon-box-size solid;
     min-height: $toast-icon-box-size;
+    max-width: 400px;
     &:before {
       left: -#{$toast-icon-box-size};
       width: $toast-icon-box-size;

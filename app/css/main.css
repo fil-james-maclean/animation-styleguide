@@ -2468,7 +2468,7 @@ p, .p {
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.36, 0.51, 0.54, 1.16); }
 
-@keyframes FlipUp90 {
+@keyframes flipUp90 {
   from {
     transform: perspective(800px) translateY(40%) rotateX(-90deg);
     opacity: 0; }
@@ -2479,14 +2479,14 @@ p, .p {
 .parent-perspective {
   perspective: 800px; }
 
-.FlipUp90 {
+.flipUp90 {
   -webkit-backface-visibility: hidden !important;
   backface-visibility: hidden !important;
-  animation-name: FlipUp90;
+  animation-name: flipUp90;
   animation-timing-function: ease;
   animation-fill-mode: both; }
 
-@keyframes FlipDown90 {
+@keyframes flipDown90 {
   from {
     transform: perspective(800px) translateY(-40%) rotateX(90deg);
     opacity: 0; }
@@ -2497,13 +2497,13 @@ p, .p {
 .parent-perspective {
   perspective: 800px; }
 
-.FlipDown90 {
+.flipDown90 {
   -webkit-backface-visibility: hidden !important;
   backface-visibility: hidden !important;
-  animation-name: FlipDown90;
+  animation-name: flipDown90;
   animation-timing-function: ease;
   animation-fill-mode: both; }
-  .FlipDown90.reverse {
+  .flipDown90.reverse {
     animation-direction: reverse; }
 
 @keyframes fadeOut {
@@ -2595,7 +2595,7 @@ p, .p {
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.78, -0.21, 0.84, 0.78); }
 
-@keyframes FlipOutUp90 {
+@keyframes flipOutUp90 {
   from {
     transform: perspective(800px) translateY(0) rotateX(0deg);
     opacity: 1; }
@@ -2603,14 +2603,14 @@ p, .p {
     transform: perspective(800px) translateY(-40%) rotateX(90deg);
     opacity: 0; } }
 
-.FlipOutUp90 {
+.flipOutUp90 {
   -webkit-backface-visibility: hidden !important;
   backface-visibility: hidden !important;
-  animation-name: FlipOutUp90;
+  animation-name: flipOutUp90;
   animation-timing-function: ease;
   animation-fill-mode: both; }
 
-@keyframes FlipOutDown90 {
+@keyframes flipOutDown90 {
   from {
     transform: perspective(800px) translateY(0) rotateX(0deg);
     opacity: 1; }
@@ -2621,15 +2621,15 @@ p, .p {
 .parent-perspective {
   perspective: 800px; }
 
-.FlipOutDown90 {
+.flipOutDown90 {
   -webkit-backface-visibility: hidden !important;
   backface-visibility: hidden !important;
-  animation-name: FlipOutDown90;
+  animation-name: flipOutDown90;
   animation-timing-function: ease;
   animation-fill-mode: both; }
 
 /**
-* ====== Card Flip Execute =======
+* ====== Card flip Execute =======
 */
 .container3d {
   position: relative;
@@ -2654,7 +2654,7 @@ p, .p {
 .card--back {
   transform: rotateY(180deg); }
 
-@keyframes FlipLeft180 {
+@keyframes flipLeft180 {
   from {
     transform: translateZ(0) translateX(0) rotateY(0deg); }
   45% {
@@ -2665,12 +2665,12 @@ p, .p {
 .parent-perspective {
   perspective: 800px; }
 
-.FlipLeft180 {
-  animation-name: FlipLeft180;
+.flipLeft180 {
+  animation-name: flipLeft180;
   animation-timing-function: linear;
   animation-fill-mode: both; }
 
-@keyframes FlipRight180 {
+@keyframes flipRight180 {
   from {
     transform: translateZ(0) translateX(0) rotateY(-180deg); }
   60% {
@@ -2678,8 +2678,8 @@ p, .p {
   to {
     transform: translateZ(0) translateX(0) rotateY(0deg); } }
 
-.FlipRight180 {
-  animation-name: FlipRight180;
+.flipRight180 {
+  animation-name: flipRight180;
   animation-timing-function: linear;
   animation-fill-mode: both; }
 
@@ -2757,7 +2757,7 @@ p, .p {
   animation-name: PulseOutline;
   animation-fill-mode: both; }
 
-@keyframes Shake {
+@keyframes shake {
   from, to {
     transform: translate3d(0, 0, 0); }
   10%, 30%, 50%, 70%, 90% {
@@ -2765,8 +2765,8 @@ p, .p {
   20%, 40%, 60%, 80% {
     transform: translate3d(10px, 0, 0); } }
 
-.Shake {
-  animation-name: Shake;
+.shake {
+  animation-name: shake;
   animation-timing-function: linear;
   animation-fill-mode: both; }
 
@@ -2775,39 +2775,6 @@ p, .p {
   position: relative;
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.2); }
 
-/**
-
-* fadeout-scaledown
-* fadeout-movedown-scaledown
-* fadeout-moveup-scaleup (moved the UI towards the user past the screen, avoid?)
-
-* fadeout-moveleft
-* fadeout-moveright
-
-* flipup-90
-* flipdown-90
-
-* flipdown-180
-
-* flipright-180
-
-* Emphasis
-* pulse-scale
-* pulse-outline
-* light-flare
-* spotlight
-
-* flipdown-180
-* flipleft-180
-* flipright-180
-
-* Execute
-* move ( best left to JS animations )
-* height ( best left to JS animations )
-* buy-cta
-* flash-secondary
-* flash-primay
-*/
 @keyframes moveHorizontal {
   from, to {
     transform: translate3d(-150px, 0, 0); }
@@ -2938,7 +2905,8 @@ p, .p {
 .msg__toast {
   padding: 12px 20px;
   border-left: 66px solid;
-  min-height: 66px; }
+  min-height: 66px;
+  max-width: 400px; }
   .msg__toast:before {
     left: -66px;
     width: 66px;

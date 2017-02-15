@@ -224,7 +224,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   animation-timing-function: $easeout-back;
 }
 
-@keyframes FlipUp90  {
+@keyframes flipUp90  {
   from {
     // transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     transform: perspective($animation-perspective) translateY( 40% ) rotateX( -90deg );
@@ -241,15 +241,15 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 .parent-perspective {
   perspective: $animation-perspective;
 }
-.FlipUp90 {
+.flipUp90 {
   backface-visibility: hidden !important;
-  animation-name: FlipUp90 ;
+  animation-name: flipUp90 ;
   animation-timing-function: ease;
   animation-fill-mode: both;
 }
 
 
-@keyframes FlipDown90  {
+@keyframes flipDown90  {
   from {
     // transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     transform: perspective($animation-perspective) translateY( -40% ) rotateX( 90deg );
@@ -266,9 +266,9 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 .parent-perspective {
   perspective: $animation-perspective;
 }
-.FlipDown90 {
+.flipDown90 {
   backface-visibility: hidden !important;
-  animation-name: FlipDown90 ;
+  animation-name: flipDown90 ;
   animation-timing-function: ease;
   animation-fill-mode: both;
   &.reverse {
@@ -411,7 +411,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 }
 
 
-@keyframes FlipOutUp90  {
+@keyframes flipOutUp90  {
   from {
 
     transform: perspective($animation-perspective) translateY( 0 ) rotateX( 0deg );
@@ -424,15 +424,15 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.FlipOutUp90 {
+.flipOutUp90 {
   backface-visibility: hidden !important;
-  animation-name: FlipOutUp90 ;
+  animation-name: flipOutUp90 ;
   animation-timing-function: ease;
   animation-fill-mode: both;
 }
 
 
-@keyframes FlipOutDown90  {
+@keyframes flipOutDown90  {
   from {
     transform: perspective($animation-perspective) translateY( 0 ) rotateX( 0deg );
     opacity: 1;
@@ -447,16 +447,16 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 .parent-perspective {
   perspective: $animation-perspective;
 }
-.FlipOutDown90 {
+.flipOutDown90 {
   backface-visibility: hidden !important;
-  animation-name: FlipOutDown90 ;
+  animation-name: flipOutDown90 ;
   animation-timing-function: ease;
   animation-fill-mode: both;
 }
 
 
 /**
-* ====== Card Flip Execute =======
+* ====== Card flip Execute =======
 */
 
 .container3d {
@@ -487,7 +487,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 
 }
 
-@keyframes FlipLeft180  {
+@keyframes flipLeft180  {
   from {
     transform: translateZ( 0 ) translateX( 0 ) rotateY( 0deg );
   }
@@ -506,13 +506,13 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   perspective: $animation-perspective;
 }
 
-.FlipLeft180 {
-  animation-name: FlipLeft180 ;
+.flipLeft180 {
+  animation-name: flipLeft180 ;
   animation-timing-function: linear;
   animation-fill-mode: both;
 }
 
-@keyframes FlipRight180  {
+@keyframes flipRight180  {
   from {
     transform: translateZ( 0 ) translateX( 0 ) rotateY( -180deg );
   }
@@ -527,8 +527,8 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.FlipRight180 {
-  animation-name: FlipRight180 ;
+.flipRight180 {
+  animation-name: flipRight180 ;
   animation-timing-function: linear;
   animation-fill-mode: both;
 }
@@ -660,7 +660,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   animation-fill-mode: both;
 }
 
-@keyframes Shake {
+@keyframes shake {
   from, to {
     transform: translate3d(0, 0, 0);
   }
@@ -674,8 +674,8 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 }
 
-.Shake {
-  animation-name: Shake;
+.shake {
+  animation-name: shake;
   animation-timing-function: linear;
   animation-fill-mode: both;
 }
@@ -686,36 +686,3 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   position: relative;
   box-shadow: 0px 4px 40px 0px rgba(0,0,0,0.2);
 }
-/**
-
-* fadeout-scaledown
-* fadeout-movedown-scaledown
-* fadeout-moveup-scaleup (moved the UI towards the user past the screen, avoid?)
-
-* fadeout-moveleft
-* fadeout-moveright
-
-* flipup-90
-* flipdown-90
-
-* flipdown-180
-
-* flipright-180
-
-* Emphasis
-* pulse-scale
-* pulse-outline
-* light-flare
-* spotlight
-
-* flipdown-180
-* flipleft-180
-* flipright-180
-
-* Execute
-* move ( best left to JS animations )
-* height ( best left to JS animations )
-* buy-cta
-* flash-secondary
-* flash-primay
-*/

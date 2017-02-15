@@ -97,11 +97,11 @@ $( document ).on( 'click', '.js-fadeInLeft-trigger', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-FlipUp90-trigger', function( e ) {
+$( document ).on( 'click', '.js-flipUp90-trigger', function( e ) {
 
-     $( '.js-FlipUp90-target' ).each( function() {
+     $( '.js-flipUp90-target' ).each( function() {
 
-          $( this ).toggleClass( 'delay-100 dur-500 FlipUp90  is-hidden' );
+          $( this ).toggleClass( 'delay-100 dur-500 flipUp90  is-hidden' );
 
      } );
 
@@ -110,11 +110,11 @@ $( document ).on( 'click', '.js-FlipUp90-trigger', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-FlipDown90-trigger', function( e ) {
+$( document ).on( 'click', '.js-flipDown90-trigger', function( e ) {
 
-     $( '.js-FlipDown90-target' ).each( function() {
+     $( '.js-flipDown90-target' ).each( function() {
 
-          $( this ).toggleClass( 'delay-100 dur-500 FlipDown90  is-hidden' );
+          $( this ).toggleClass( 'delay-100 dur-500 flipDown90  is-hidden' );
 
      } );
 
@@ -217,24 +217,11 @@ $( document ).on( 'click', '.js-fadeOutRight-trigger', function( e ) {
 
 
 
-$( document ).on( 'click', '.js-FlipOutUp90-trigger', function( e ) {
+$( document ).on( 'click', '.js-flipOutUp90-trigger', function( e ) {
 
-     $( '.js-FlipOutUp90-target' ).each( function() {
+     $( '.js-flipOutUp90-target' ).each( function() {
 
-          $( this ).toggleClass( 'delay-100 dur-500 FlipOutUp90 is-hidden' );
-
-     } );
-
-     e.preventDefault();
-
-} );
-
-
-$( document ).on( 'click', '.js-FlipOutDown90-trigger', function( e ) {
-
-     $( '.js-FlipOutDown90-target' ).each( function() {
-
-          $( this ).toggleClass( 'delay-100 dur-500 FlipOutDown90 is-hidden' );
+          $( this ).toggleClass( 'delay-100 dur-500 flipOutUp90 is-hidden' );
 
      } );
 
@@ -243,16 +230,29 @@ $( document ).on( 'click', '.js-FlipOutDown90-trigger', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-FlipLeft180-trigger', function( e ) {
+$( document ).on( 'click', '.js-flipOutDown90-trigger', function( e ) {
 
-     $( '.js-FlipLeft180-target' ).each( function() {
+     $( '.js-flipOutDown90-target' ).each( function() {
+
+          $( this ).toggleClass( 'delay-100 dur-500 flipOutDown90 is-hidden' );
+
+     } );
+
+     e.preventDefault();
+
+} );
+
+
+$( document ).on( 'click', '.js-flipLeft180-trigger', function( e ) {
+
+     $( '.js-flipLeft180-target' ).each( function() {
 
          if ( $( this ).hasClass( 'card__flipped' ) ) {
-              $( this ).removeClass( 'delay-100 dur-500 FlipLeft180 card__flipped' );
-              $( this ).addClass( 'delay-100 dur-500 FlipRight180' );
+              $( this ).removeClass( 'delay-100 dur-500 flipLeft180 card__flipped' );
+              $( this ).addClass( 'delay-100 dur-500 flipRight180' );
          } else {
-             $( this ).removeClass( 'delay-100 dur-500 FlipRight180' );
-             $( this ).addClass( 'delay-100 dur-500 FlipLeft180 card__flipped' );
+             $( this ).removeClass( 'delay-100 dur-500 flipRight180' );
+             $( this ).addClass( 'delay-100 dur-500 flipLeft180 card__flipped' );
          }
      } );
 
@@ -289,11 +289,11 @@ $( document ).on( 'click', '.js-PulseOutline-trigger', function( e ) {
 } );
 
 
-$( document ).on( 'click', '.js-Shake-trigger', function( e ) {
+$( document ).on( 'click', '.js-shake-trigger', function( e ) {
 
-     $( '.js-Shake-target' ).each( function() {
+     $( '.js-shake-target' ).each( function() {
 
-          $( this ).toggleClass( 'delay-100 dur-1200 Shake' );
+          $( this ).toggleClass( 'delay-100 dur-1200 shake' );
 
      } );
 
@@ -329,7 +329,7 @@ var overlayEnterClasses = "delay-200 dur-400 fadeIn"
 var overlayExitClasses = "delay-400 dur-200 fadeOut"
 
 function clearButtonState() {
-    $( '.js-enter-button, .js-exit-button, .js-execute-button' ).removeClass('disabled');
+    $( '.js-enter-button, .js-exit-button, .js-emphasis-button, .js-execute-button' ).removeClass('disabled');
 }
 
 function disableButton( $sel ) {
@@ -403,6 +403,58 @@ $( document ).on( 'click', '.js-modal-exit-trigger', function( event ) {
 
 $( document ).on( 'click', '.js-modal-execute-trigger', function( e ) {
      $( '.js-modal-target' ).hasClass('js-modal__is-open') ? executeModal() : false;
+     e.preventDefault();
+} );
+
+
+/* Toast example */
+var toastEnterClasses = "delay-100 dur-500 fadeInRight js-toast__is-open"
+var toastExitClasses = "is-hidden delay-100 dur-200 fadeOut js-toast__is-closed"
+var toastEmphasisClasses = "dur-800 shake js-toast__is-open"
+/*
+Function to control the entrance animation of the Toast
+*/
+function enterToast() {
+    $( '.js-toast-target' ).removeClass(toastExitClasses);
+    $( '.js-toast-target' ).removeClass(toastEmphasisClasses);
+    $( '.js-toast-target' ).addClass(toastEnterClasses);
+
+    clearButtonState();
+    disableButton( '.js-enter-button' );
+}
+
+/*
+Function to control the exit animation of the Toast
+*/
+function exitToast() {
+    $( '.js-toast-target' ).removeClass(toastEnterClasses);
+    $( '.js-toast-target' ).removeClass(toastEmphasisClasses);
+    $( '.js-toast-target' ).addClass(toastExitClasses);
+
+    clearButtonState();
+    disableButton( '.js-exit-button, .js-emphasis-button' );
+}
+
+function emphasisToast() {
+    $( '.js-toast-target' ).removeClass(toastEnterClasses);
+    $( '.js-toast-target' ).removeClass(toastExitClasses);
+    $( '.js-toast-target' ).addClass(toastEmphasisClasses);
+
+}
+
+
+$( document ).on( 'click', '.js-toast-enter-trigger', function( event ) {
+    $( '.js-toast-target' ).hasClass('js-toast__is-closed') ? enterToast() : false;
+    event.preventDefault();
+} );
+
+$( document ).on( 'click', '.js-toast-exit-trigger', function( event ) {
+    $( '.js-toast-target' ).hasClass('js-toast__is-open') ? exitToast() : false;
+    event.preventDefault();
+} );
+
+$( document ).on( 'click', '.js-toast-emphasis-trigger', function( e ) {
+     $( '.js-toast-target' ).hasClass('js-toast__is-open') ? emphasisToast() : false;
      e.preventDefault();
 } );
 

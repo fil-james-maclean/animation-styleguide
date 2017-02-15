@@ -280,7 +280,7 @@
   animation-name: shake;
 }
 
-@-webkit-keyframes headShake {
+@-webkit-keyframes headshake {
   0% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -312,7 +312,7 @@
   }
 }
 
-@keyframes headShake {
+@keyframes headshake {
   0% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -344,11 +344,11 @@
   }
 }
 
-.headShake {
+.headshake {
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
-  -webkit-animation-name: headShake;
-  animation-name: headShake;
+  -webkit-animation-name: headshake;
+  animation-name: headshake;
 }
 
 @-webkit-keyframes swing {
