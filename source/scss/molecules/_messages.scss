@@ -2,6 +2,9 @@
     font-family: $web-safe-font;
     color: $grey85;
     font-size: 12px;
+    line-height: 16px;
+    display: block;
+    width: 100%;
 }
 
 .msg--txt__list {
@@ -9,8 +12,10 @@
     margin-bottom: 0.5em;
 }
 
-
+$toast-icon-size: 30px;
 $toast-icon-box-size: 66px;
+$tooltip-icon-size: 24px;
+$tooltip-icon-box-size: 36px;
 
 .msg {
     cursor: help;
@@ -28,9 +33,6 @@ $toast-icon-box-size: 66px;
 }
 
 
-$tooltip-icon-box-size: 36px;
-
-
 .msg__toast {
     padding: 12px 20px;
     border-left: $toast-icon-box-size solid;
@@ -39,7 +41,7 @@ $tooltip-icon-box-size: 36px;
     &:before {
       left: -#{$toast-icon-box-size};
       width: $toast-icon-box-size;
-      font-size: 30px;
+      font-size: $toast-icon-size;
     }
 
     .msg--txt {
@@ -80,10 +82,14 @@ $tooltip-icon-box-size: 36px;
     padding: 4px 8px;
     border-left: $tooltip-icon-box-size solid;
     min-height: $tooltip-icon-box-size;
+    min-width: 14em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     &:before {
       left: -#{$tooltip-icon-box-size};
       width: $tooltip-icon-box-size;
-      font-size: 24px;
+      font-size: $tooltip-icon-size;
     }
 }
 

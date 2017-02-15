@@ -65,3 +65,19 @@ body{
 .overlay__dark {
     background-color: rgba($grey85, 0.4);
 }
+
+
+.demo-box-tooltip {
+    position: relative;
+    width: 300px;
+    height: 32px;
+}
+
+
+.demo-tooltip {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+    // transform: translate(0,8px);
+}

@@ -2886,7 +2886,10 @@ p, .p {
 .msg--txt {
   font-family: Arial, Helvetica, sans-serif;
   color: #262626;
-  font-size: 12px; }
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+  width: 100%; }
 
 .msg--txt__list {
   min-width: 18em;
@@ -2938,7 +2941,14 @@ p, .p {
 .msg__tooltip {
   padding: 4px 8px;
   border-left: 36px solid;
-  min-height: 36px; }
+  min-height: 36px;
+  min-width: 14em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
   .msg__tooltip:before {
     left: -36px;
     width: 36px;
@@ -3061,3 +3071,14 @@ body {
 
 .overlay__dark {
   background-color: rgba(38, 38, 38, 0.4); }
+
+.demo-box-tooltip {
+  position: relative;
+  width: 300px;
+  height: 32px; }
+
+.demo-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px; }

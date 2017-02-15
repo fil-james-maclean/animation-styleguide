@@ -458,4 +458,35 @@ $( document ).on( 'click', '.js-toast-emphasis-trigger', function( e ) {
      e.preventDefault();
 } );
 
+
+/* Tooltip example */
+var tooltipEnterClasses = "delay-100 dur-500 fadeInDown js-tooltip__is-open"
+var tooltipExitClasses = "is-hidden delay-100 dur-200 fadeOut js-tooltip__is-closed"
+
+function enterTooltip() {
+    $( '.js-tooltip-target' ).removeClass(tooltipExitClasses);
+    $( '.js-tooltip-target' ).addClass(tooltipEnterClasses);
+
+    clearButtonState();
+    disableButton( '.js-enter-button' );
+}
+
+function exitTooltip() {
+    $( '.js-tooltip-target' ).removeClass(tooltipEnterClasses);
+    $( '.js-tooltip-target' ).addClass(tooltipExitClasses);
+
+    clearButtonState();
+    disableButton( '.js-exit-button' );
+}
+
+$( document ).on( 'click', '.js-tooltip-enter-trigger', function( event ) {
+    $( '.js-tooltip-target' ).hasClass('js-tooltip__is-closed') ? enterTooltip() : false;
+    event.preventDefault();
+} );
+
+$( document ).on( 'click', '.js-tooltip-exit-trigger', function( event ) {
+    $( '.js-tooltip-target' ).hasClass('js-tooltip__is-open') ? exitTooltip() : false;
+    event.preventDefault();
+} );
+
 })( jQuery ); // close IIFE
