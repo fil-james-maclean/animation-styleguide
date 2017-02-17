@@ -3149,8 +3149,8 @@ body {
   transform: translateX(-12px); }
 
 .loading-btn.is-loading .loading-btn--spinner {
-  -ms-transform: translateX(-30px);
-  transform: translateX(-30px); }
+  -ms-transform: translate(-24px, -50%);
+  transform: translate(-24px, -50%); }
 
 .loading-btn--text {
   display: block;
@@ -3159,19 +3159,89 @@ body {
 .loading-btn--spinner {
   display: block;
   position: absolute;
-  padding: 14px 4px;
   left: 100%;
-  top: 0;
-  height: 100%;
-  /* background: saddlebrown; */
-  /* transform: translateY(-50%); */
+  top: 50%;
+  transition: transform 200ms ease;
+  -ms-transform: translate(0px, -50%);
+  transform: translate(0px, -50%); }
+
+.loading-btn-medium {
+  overflow: hidden; }
+
+@keyframes loading-btn-animation {
+  from {
+    transform: translate(0, -100%); }
+  5%, 65% {
+    transform: translate(0, 0%); }
+  75%, 95% {
+    transform: translate(-50%, 0%); }
+  to {
+    transform: translate(-50%, -100%); } }
+
+.loading-btn-medium.is-loading .loading-btn-medium--mask {
+  animation-name: loading-btn-animation;
+  animation-fill-mode: both;
+  animation-duration: 6000ms; }
+
+.loading-btn-medium.is-loading:hover {
+  color: #006193; }
+
+.loading-btn-medium--text {
+  display: block;
   transition: transform 200ms ease; }
+
+.loading-btn-medium--mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: #FFFFFF;
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  transition: transform 300ms ease-out;
+  /* transform: translate(0, 0%); */
+  /* transform: translate(-50%, 0%); */
+  /* transform: translate(-50%, -100%); */ }
+
+.loading-btn-medium--loadingtext {
+  text-align: left;
+  display: block;
+  padding: 10px 20px 9px;
+  float: left;
+  width: 50%; }
+
+.loading-btn-medium--donetext {
+  text-align: center;
+  display: block;
+  padding: 10px 20px 9px;
+  float: left;
+  width: 50%;
+  background: #339900;
+  color: #FFFFFF; }
+
+.loading-btn-medium--spinner {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: transform 200ms ease;
+  -ms-transform: translate(-150%, -50%);
+  transform: translate(-150%, -50%); }
 
 .loading-card {
   border: 1px solid #BFBFBF;
   border-radius: 3px;
   width: 260px;
   position: relative; }
+
+.currency {
+  border-top: 1px solid #333333;
+  display: block;
+  font-family: arial;
+  text-align: right;
+  padding-top: 8px;
+  font-size: 24px; }
 
 .loading-card--overlay {
   background: rgba(255, 255, 255, 0.8);

@@ -503,6 +503,22 @@ $( document ).on( 'click', '.js-loading-btn-toggle', function( e ) {
 
 } );
 
+$( document ).on( 'click', '.js-loading-btn-medium-toggle', function( e ) {
+
+     $( '.js-loading-btn-medium-toggle' ).each( function() {
+
+          $( this ).addClass( 'is-loading' );
+            function endLoading(){
+             $( '.js-loading-btn-medium-toggle' ).removeClass( 'is-loading' );
+            }
+            setTimeout(endLoading, 6000);
+
+     } );
+
+     e.preventDefault();
+
+} );
+
 $( document ).on( 'click', '.js-loading-card-toggle', function( e ) {
 
      $( '.js-loading-card-target-overlay' ).toggleClass( 'dur-300 fadeIn is-hidden' );
@@ -511,5 +527,3 @@ $( document ).on( 'click', '.js-loading-card-toggle', function( e ) {
      e.preventDefault();
 
 } );
-
-js-loading-card-toggle
