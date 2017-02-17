@@ -490,3 +490,26 @@ $( document ).on( 'click', '.js-tooltip-exit-trigger', function( event ) {
 } );
 
 })( jQuery ); // close IIFE
+
+$( document ).on( 'click', '.js-loading-btn-toggle', function( e ) {
+
+     $( '.js-loading-btn-toggle' ).each( function() {
+
+          $( this ).toggleClass( 'is-loading' );
+
+     } );
+
+     e.preventDefault();
+
+} );
+
+$( document ).on( 'click', '.js-loading-card-toggle', function( e ) {
+
+     $( '.js-loading-card-target-overlay' ).toggleClass( 'dur-300 fadeIn is-hidden' );
+     $( '.js-loading-card-target-loader' ).toggleClass( 'delay-200 dur-500 fadeInScaleDown' );
+
+     e.preventDefault();
+
+} );
+
+js-loading-card-toggle

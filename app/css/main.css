@@ -3033,6 +3033,40 @@ p, .p {
   color: #262626;
   font-size: 12px; }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.loadingSpinner:before {
+  content: '';
+  display: block;
+  border-radius: 999px;
+  border-style: solid;
+  border-color: #016FAD #BFBFBF #BFBFBF #BFBFBF;
+  animation: spin 750ms infinite linear; }
+
+.loadingSpinner--small:before {
+  height: 16px;
+  width: 16px;
+  border-width: 2px; }
+
+.loadingSpinner--medium:before {
+  height: 24px;
+  width: 24px;
+  border-width: 3px; }
+
+.loadingSpinner--large:before {
+  height: 48px;
+  width: 48px;
+  border-width: 4px; }
+
+.loadingSpinner--xlarge:before {
+  height: 96px;
+  width: 96px;
+  border-width: 8px; }
+
 html {
   box-sizing: border-box;
   height: 100%; }
@@ -3082,3 +3116,77 @@ body {
   top: 100%;
   left: 0;
   margin-top: 8px; }
+
+.demo-loadingbox {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  position: relative; }
+  .demo-loadingbox .loadingSpinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.demo-loading-form {
+  border: 1px solid #666666;
+  padding: 0 12px;
+  height: 44px;
+  line-height: 44px;
+  width: 240px;
+  position: relative; }
+  .demo-loading-form .loadingSpinner {
+    position: absolute;
+    right: 12px;
+    top: 13px; }
+
+.loading-btn {
+  overflow: hidden; }
+
+.loading-btn.is-loading .loading-btn--text {
+  -ms-transform: translateX(-12px);
+  transform: translateX(-12px); }
+
+.loading-btn.is-loading .loading-btn--spinner {
+  -ms-transform: translateX(-30px);
+  transform: translateX(-30px); }
+
+.loading-btn--text {
+  display: block;
+  transition: transform 200ms ease; }
+
+.loading-btn--spinner {
+  display: block;
+  position: absolute;
+  padding: 14px 4px;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  /* background: saddlebrown; */
+  /* transform: translateY(-50%); */
+  transition: transform 200ms ease; }
+
+.loading-card {
+  border: 1px solid #BFBFBF;
+  border-radius: 3px;
+  width: 260px;
+  position: relative; }
+
+.loading-card--overlay {
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; }
+  .loading-card--overlay .loadingSpinner--container {
+    height: 100%;
+    width: 100%;
+    position: relative; }
+  .loading-card--overlay .loadingSpinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }

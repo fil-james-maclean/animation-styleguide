@@ -20,6 +20,7 @@
 @import "animations/assembly-examples";
 @import "molecules/modal";
 @import "molecules/messages";
+@import "molecules/loader";
 
 html {
   box-sizing: border-box;
@@ -80,4 +81,91 @@ body{
     left: 0;
     margin-top: 8px;
     // transform: translate(0,8px);
+}
+
+
+.demo-loadingbox {
+    height: 200px; width: 200px;
+    display: inline-block;
+    position: relative;
+    .loadingSpinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.demo-loading-form {
+  border: 1px solid $grey60;
+  padding: 0 12px;
+  height: 44px;
+  line-height: 44px;
+  width: 240px;
+  position: relative;
+  .loadingSpinner {
+    position: absolute;
+    right: 12px;
+    top: 13px;
+  }
+}
+
+
+
+
+.loading-btn {
+        overflow: hidden;
+}
+ .loading-btn.is-loading {
+     .loading-btn--text {
+        transform: translateX(-12px);
+     }
+     .loading-btn--spinner  {
+        transform: translateX(-30px);
+     }
+ }
+
+.loading-btn--text {
+    display: block;
+    transition: transform 200ms ease;
+}
+
+.loading-btn--spinner  {
+    display: block;
+    position: absolute;
+    padding: 14px 4px;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    /* background: saddlebrown; */
+    /* transform: translateY(-50%); */
+    transition: transform 200ms ease;
+}
+
+.loading-card {
+  border: 1px solid $grey25;
+  border-radius: 3px;
+  width: 260px;
+  position: relative;
+
+}
+
+.loading-card--overlay {
+  background: rgba($white, 0.8);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  .loadingSpinner--container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .loadingSpinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

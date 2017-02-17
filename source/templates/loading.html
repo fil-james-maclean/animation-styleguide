@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+<div class="gutted">
+
+   <h5 class="rhythmic-m">Inside a form field</h5>
+   <div class="demo-loading-form">
+      <span>Check this input</span>
+      <div class="loadingSpinner  loadingSpinner--small"></div>
+   </div>
+
+   <h5 class="rhythmic-m">Inside a button</h5>
+   <div class="loading-btn btn btn-cta  js-loading-btn-toggle">
+      <span class="loading-btn--text">Load lots of stuff</span>
+      <div class="loading-btn--spinner loadingSpinner  loadingSpinner--small"></div>
+   </div>
+
+</div>
+
+<div class="gutted rhythmic-xl">
+   <h3 class="rhythm-m-1">Large size loader</h3>
+   <div class="rhythmic gutted loading-card">
+      <h4 class="rhythm-m-1">This card</h4>
+      <p class="rhythm-m-1">Has some data that needs to load.</p>
+      <span>£-,---,---.--</span>
+      <div class="loading-card--overlay js-loading-card-target-overlay is-hidden">
+         <div class="loadingSpinner--container js-loading-card-target-loader">
+           <div class="loadingSpinner  loadingSpinner--large"></div>
+         </div>
+      </div>
+   </div>
+         <div class="rhythmic-m btn btn-secondary js-loading-card-toggle">load the data</div>
+</div>
+
+<h2>On a light background</h2>
+<div class="demo-loadingbox bg-white">
+   <div class="loadingSpinner  loadingSpinner--small"></div>
+</div>
+
+<div class="demo-loadingbox bg-white">
+    <div class="loadingSpinner  loadingSpinner--medium"></div>
+</div>
+
+<div class="demo-loadingbox bg-white">
+    <div class="loadingSpinner  loadingSpinner--large"></div>
+</div>
+
+<div class="demo-loadingbox bg-white">
+    <div class="loadingSpinner  loadingSpinner--xlarge"></div>
+</div>
+
+<h2>On a dark background</h2>
+<div class="demo-loadingbox bg-grey85">
+   <div class="loadingSpinner  loadingSpinner--small"></div>
+</div>
+
+<div class="demo-loadingbox bg-grey85">
+    <div class="loadingSpinner  loadingSpinner--medium"></div>
+</div>
+
+<div class="demo-loadingbox bg-grey85">
+    <div class="loadingSpinner  loadingSpinner--large"></div>
+</div>
+
+<div class="demo-loadingbox bg-grey85">
+    <div class="loadingSpinner  loadingSpinner--xlarge"></div>
+</div>
+
+
+{% endblock %}
