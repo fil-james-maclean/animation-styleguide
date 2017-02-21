@@ -1,26 +1,22 @@
 {% extends "layouts/main.html" %}
 
 {% block content %}
-<div class="gutted">
 
-    <div class="overlay overlay__light is-hidden js-progress-overlay">
+<div class="overlay overlay__light is-hidden js-progress-overlay">
 
-    	<div class="progressLoader is-right">
-        <div class="progresstext">
-            <span id="progressTxt-id" class="progresstext--string  js-progresstext--string">Loading</span>
-            <span class="progresstext--dots  js-progresstext--dots"></span>
-        </div>
-
-    	<div class="progressLoader--circle  js-progressLoader--circle"></div>
-
-    	</div>
+	<div class="progressLoader is-right">
+    <div class="progresstext">
+        <span id="progressTxt-id" class="progresstext--string  js-progresstext--string">Loading</span>
+        <span class="progresstext--dots  js-progresstext--dots"></span>
     </div>
 
+	<div class="progressLoader--circle  js-progressLoader--circle"></div>
+
+	</div>
 </div>
 
 
-
-<div class="text-center demoButtons rhythmic">
+<div class="text-center demoButtons rhythmic demo-progress-spacer">
     <a class="btn  btn-tertiary  js-enter-button js-progress-enter-trigger">Enter</a>
     <a class="btn  btn-tertiary  js-exit-button  disabled  js-progress-exit-trigger">Exit</a>
 </div>
@@ -34,4 +30,6 @@
     </div>
 
 </div> -->
+
+
 {% endblock %}
