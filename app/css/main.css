@@ -3289,17 +3289,17 @@ body {
     transform: translateX(100%); }
 
 .bg-before-img {
-  background-image: url("../assets/bg_nomask.png"); }
+  background-image: url("../img/bg_nomask.png"); }
 
 .bg-after-img {
-  background-image: url("../assets/bg_darkmask.png");
+  background-image: url("../img/bg_darkmask.png");
   display: none; }
 
 .bg-loginform-img {
-  background-image: url("../assets/login.png"); }
+  background-image: url("../img/login.png"); }
 
 .bg-summary-img {
-  background-image: url("../assets/accountsummary.png"); }
+  background-image: url("../img/accountsummary.png"); }
 
 /*
 * Below is used for the progress ring animation
@@ -3373,3 +3373,8 @@ body {
   background-color: #006193;
   width: 0%;
   height: 100%; }
+
+.fixedBottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%; }

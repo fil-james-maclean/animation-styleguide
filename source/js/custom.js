@@ -527,3 +527,13 @@ $( document ).on( 'click', '.js-loading-card-toggle', function( e ) {
      e.preventDefault();
 
 } );
+
+$( document ).on( 'click', '.js-canvas-execute-trigger', function( e ) {
+
+    $( '.bg-loginform-img' ).toggleClass( 'is-left' );
+    $( '.bg-summary-img' ).toggleClass( 'is-right' );
+
+
+    e.preventDefault();
+
+} );
