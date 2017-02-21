@@ -2,8 +2,10 @@
 
 {% block content %}
 <div class="gutted">
+<h3 class="rhythm-m-1">Small size loader</h3>
 
    <h5 class="rhythmic-m">Inside a form field</h5>
+   <span>Lable for input</span>
    <div class="demo-loading-form">
       <span>Check this input</span>
       <div class="loadingSpinner  loadingSpinner--small"></div>
@@ -17,6 +19,7 @@
       </div>
    </div>
 
+   <h3 class="rhythm-m-1">Medium size loader</h3>
 
    <div class="loading-btn-medium btn btn-tertiary btn--medium  js-loading-btn-medium-toggle">
       <span class="loading-btn-medium--text">Load lots of stuff</span>
@@ -35,7 +38,7 @@
       <h4 class="rhythm-m-1">This card</h4>
       <p class="rhythm-m-1">Has some data that needs to load.</p>
       <span class="currency">£-,---,---.--</span>
-      <div class="loading-card--overlay js-loading-card-target-overlay is-hidden">
+      <div class="loading-card--overlay overlay__light js-loading-card-target-overlay is-hidden">
          <div class="loadingSpinner--container js-loading-card-target-loader">
            <div class="loadingSpinner  loadingSpinner--large"></div>
          </div>
@@ -44,39 +47,16 @@
          <div class="rhythmic-m btn btn-tertiary js-loading-card-toggle">load the data</div>
 </div>
 
-<h2>On a light background</h2>
-<div class="demo-loadingbox bg-white">
-   <div class="loadingSpinner  loadingSpinner--small"></div>
+<div class="gutted">
+
+   <h2 class="rhythm-m-1">xLarge size Loader</h2>
+   <p>Uesful for loading a larger area.</p>
+   <div class="demo-loadingbox bg-white">
+       <div class="loadingSpinner  loadingSpinner--xlarge"></div>
+   </div>
+
 </div>
 
-<div class="demo-loadingbox bg-white">
-    <div class="loadingSpinner  loadingSpinner--medium"></div>
-</div>
-
-<div class="demo-loadingbox bg-white">
-    <div class="loadingSpinner  loadingSpinner--large"></div>
-</div>
-
-<div class="demo-loadingbox bg-white">
-    <div class="loadingSpinner  loadingSpinner--xlarge"></div>
-</div>
-
-<h2>On a dark background</h2>
-<div class="demo-loadingbox bg-grey85">
-   <div class="loadingSpinner  loadingSpinner--small"></div>
-</div>
-
-<div class="demo-loadingbox bg-grey85">
-    <div class="loadingSpinner  loadingSpinner--medium"></div>
-</div>
-
-<div class="demo-loadingbox bg-grey85">
-    <div class="loadingSpinner  loadingSpinner--large"></div>
-</div>
-
-<div class="demo-loadingbox bg-grey85">
-    <div class="loadingSpinner  loadingSpinner--xlarge"></div>
-</div>
 
 
 {% endblock %}

@@ -1,0 +1,22 @@
+{
+  "name": "animation-styleguide",
+  "description": "A library of UI animations and how to use them in FIL digital interfaces.",
+  "main": "index.html",
+  "authors": [
+    "James Maclean"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/fil-james-maclean/animation-styleguide",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "progressbar.js": "^1.0.1"
+  }
+}
