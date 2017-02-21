@@ -528,21 +528,25 @@ $( document ).on( 'click', '.js-loading-card-toggle', function( e ) {
 
 } );
 
+
+var progressOverlayEnterClasses = "delay-100 dur-300 fadeIn"
+var progressOverlayExitClasses = "is-hidden delay-100 dur-300 fadeOut"
+
 // Show the overlay then start the progress animation
 function startprogressLoader() {
 
     setTimeout( function() {
+        $( '.js-progress-overlay' ).removeClass(progressOverlayExitClasses);
+        $( '.js-progress-overlay' ).addClass(progressOverlayEnterClasses);
 
-        $( '.js-progress-overlay' ).fadeIn( 250, function() {
+        $( '.progressLoader').removeClass( 'is-right' );
+        setTimeout(  function() {
+            to90();
+            animateDots();
+            changeText(6000);
+        }, 600 );
 
-            $( '.progressLoader').removeClass( 'is-right' );
-            setTimeout(  function() {
-                to90();
-                animateDots();
-                changeText(6000);
-            }, 300 );
 
-        } );
         // Class might not be needed
         $( 'html' ).addClass( 'no-scroll' );
 
@@ -552,14 +556,15 @@ function startprogressLoader() {
 
 function overlayFadeOut() {
     // Hides the overlay
-    $( '.js-overlay' ).fadeOut( 250 );
+    $( '.js-progress-overlay' ).removeClass(progressOverlayEnterClasses);
+    $( '.js-progress-overlay' ).addClass(progressOverlayExitClasses);
 
     // A simulation of the photograph trasnitioning into the darker version
-    $( '.bg-after-img' ).fadeIn( 250 );
-
-    // A simulation of existing functionality with a more refined animation.
-    $( '.bg-loginform-img' ).addClass( 'is-left' );
-    $( '.bg-summary-img' ).removeClass( 'is-right' );
+    // $( '.bg-after-img' ).fadeIn( 250 );
+    //
+    // // A simulation of existing functionality with a more refined animation.
+    // $( '.bg-loginform-img' ).addClass( 'is-left' );
+    // $( '.bg-summary-img' ).removeClass( 'is-right' );
 
     // Class might not be needed
     $( 'html' ).removeClass( 'no-scroll' );
