@@ -3374,7 +3374,7 @@ body {
   width: 0%;
   height: 100%; }
 
-.fixedBottom {
+.fixedTop {
   position: fixed;
-  bottom: 0;
+  top: 0;
   width: 100%; }
