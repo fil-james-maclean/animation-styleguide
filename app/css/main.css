@@ -3304,6 +3304,9 @@ body {
 /*
 * Below is used for the progress ring animation
 */
+.demo-progress-spacer {
+  margin-bottom: 400px; }
+
 .progressLoader {
   z-index: 20;
   opacity: 1;
