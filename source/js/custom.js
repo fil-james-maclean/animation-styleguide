@@ -317,7 +317,7 @@ $( document ).on( 'click', '.js-Spotlight-trigger', function( e ) {
 
 
 /* Modal Animations */
-;(function( $ ){
+// ;(function( $ ){
 var findModal = $( '.js-modal-target' );
 var findOverlay = $( '.js-overlay-target' );
 
@@ -489,7 +489,7 @@ $( document ).on( 'click', '.js-tooltip-exit-trigger', function( event ) {
     event.preventDefault();
 } );
 
-})( jQuery ); // close IIFE
+// })( jQuery ); // close IIFE
 
 $( document ).on( 'click', '.js-loading-btn-toggle', function( e ) {
 

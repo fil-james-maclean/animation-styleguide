@@ -1,6 +1,8 @@
 
 var progressOverlayEnterClasses = "delay-100 dur-300 fadeIn"
-var progressOverlayExitClasses = "is-hidden delay-100 dur-300 fadeOut"
+var progressOverlayExitClasses = "is-hidden delay-100 dur-500 fadeOut"
+
+var progressLoaderEnterClasses = "delay-600 dur-300 fadeInLeft"
 
 // Show the overlay then start the progress animation
 function startprogressLoader() {
@@ -10,6 +12,8 @@ function startprogressLoader() {
         $( '.js-progress-overlay' ).addClass(progressOverlayEnterClasses);
 
         $( '.progressLoader').removeClass( 'is-right' );
+
+
         setTimeout(  function() {
             to90();
             animateDots();
@@ -21,6 +25,8 @@ function startprogressLoader() {
         $( 'html' ).addClass( 'no-scroll' );
 
     }, 150 );
+    clearButtonState();
+    disableButton( '.js-enter-button' );
 };
 
 
@@ -38,11 +44,24 @@ function overlayFadeOut() {
 
     // Class might not be needed
     $( 'html' ).removeClass( 'no-scroll' );
+    setTimeout(  function() {
+        resetLoader();
+    }, 700 );
+
+
 
     // This is importaint, it kills a loop that will otherwise just keep going forever.
     dotsIsAnimating = false;
-};
 
+};
+function resetLoader() {
+    circle.set(0.0);
+    circle.setText(0);
+    $(".js-progresstext--string").text('Loading');
+    // $(".progressLoader--percentage").text('0');
+    clearButtonState();
+    disableButton( '.js-exit-button' );
+}
 
 // Animates the dots
 // If nothing else happens this will stop the app looking broken
