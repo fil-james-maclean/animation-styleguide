@@ -5,7 +5,7 @@
 .anim-fill-both {
   animation-fill-mode: both;
 }
-$animation-perspective: 800px;
+$animation-perspective: 1200px;
 /**
  * timings
  * easings
@@ -67,10 +67,10 @@ $animation-perspective: 800px;
 
 $easein-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 $easeout-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-$easein-back: cubic-bezier(.57, .07, .6, 1.71);
+// $easein-back: cubic-bezier(.57, .07, .6, 1.71);
 // $easeout-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 //custom
-$back-easein:cubic-bezier(0.78,-0.21,0.84,0.78);
+$easein-back:cubic-bezier(0.78,-0.21,0.84,0.78);
 $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 
 .entrance {
@@ -312,7 +312,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 .fadeOutScaleDown {
    animation-name: fadeOutScaleDown;
    animation-fill-mode: both;
-   animation-timing-function: $back-easein;
+   animation-timing-function: $easein-back;
 }
 
 @keyframes fadeOutScaleUp {
@@ -330,7 +330,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 .fadeOutScaleUp {
    animation-name: fadeOutScaleUp;
    animation-fill-mode: both;
-   animation-timing-function: $back-easein;
+   animation-timing-function: $easein-back;
 }
 
 @keyframes fadeOutUp {
@@ -349,7 +349,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 .fadeOutUp {
   animation-name: fadeOutUp;
   animation-fill-mode: both;
-  animation-timing-function: $back-easein;
+  animation-timing-function: $easein-back;
 }
 
 @keyframes fadeOutDown {
@@ -368,7 +368,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 .fadeOutDown {
   animation-name: fadeOutDown;
   animation-fill-mode: both;
-  animation-timing-function: $back-easein;
+  animation-timing-function: $easein-back;
 }
 
 
@@ -388,7 +388,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 .fadeOutLeft {
   animation-name: fadeOutLeft;
   animation-fill-mode: both;
-  animation-timing-function: $back-easein;
+  animation-timing-function: $easein-back;
 }
 
 @keyframes fadeOutRight {
@@ -407,7 +407,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 .fadeOutRight {
   animation-name: fadeOutRight;
   animation-fill-mode: both;
-  animation-timing-function: $back-easein;
+  animation-timing-function: $easein-back;
 }
 
 
@@ -493,7 +493,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 
   45% {
-    transform: translateZ( 150px ) translateX( 30% ) rotateY( -90deg );
+    transform: translateZ( 50px ) translateX( 60% ) rotateY( -90deg );
   }
 
   to {
@@ -518,7 +518,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
   }
 
   60% {
-    transform: translateZ( 150px ) translateX( -20% ) rotateY( -90deg );
+    transform: translateZ( 50px ) translateX( -30% ) rotateY( -90deg );
   }
 
   to {

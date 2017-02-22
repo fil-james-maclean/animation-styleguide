@@ -537,3 +537,21 @@ $( document ).on( 'click', '.js-canvas-execute-trigger', function( e ) {
     e.preventDefault();
 
 } );
+
+
+$( document ).on( 'click', '.js-content-card-trigger', function( e ) {
+
+     $( '.js-content-card-target' ).each( function() {
+
+         if ( $( this ).hasClass( 'card__flipped' ) ) {
+              $( this ).removeClass( 'delay-100 dur-500 flipLeft180 card__flipped' );
+              $( this ).addClass( 'delay-100 dur-500 flipRight180' );
+         } else {
+             $( this ).removeClass( 'delay-100 dur-500 flipRight180' );
+             $( this ).addClass( 'delay-100 dur-500 flipLeft180 card__flipped' );
+         }
+     } );
+
+     e.preventDefault();
+
+} );
