@@ -1262,7 +1262,7 @@ p, .p {
   font-weight: normal;
   font-style: normal; }
 
-.icon--after:after, .text-link-cta:after, .msg:before,
+.icon--after:after, .text-link-cta:after, .msg:before, .pro:before, .con:before,
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   display: inline-block;
@@ -1338,7 +1338,8 @@ p, .p {
 .icon-chevron-u-regular:before {
   content: ""; }
 
-.icon-cross-bold:before {
+.icon-cross-bold:before,
+.con:before {
   content: ""; }
 
 .icon-cross-light:before {
@@ -1368,7 +1369,8 @@ p, .p {
 .icon-tick-light:before {
   content: ""; }
 
-.icon-tick-regular:before {
+.icon-tick-regular:before,
+.pro:before {
   content: ""; }
 
 .icon-triangle-u:before {
@@ -3078,7 +3080,7 @@ body {
 
 .demoContainer {
   float: left;
-  width: 220px;
+  width: 440px;
   margin: 12px;
   text-align: center;
   background: #F7F7F7;
@@ -3088,6 +3090,40 @@ body {
   width: 100px;
   height: 100px;
   margin: auto; }
+
+.example, .discription {
+  float: left;
+  width: 50%; }
+
+.discription {
+  text-align: left; }
+
+.prosCons {
+  list-style: none;
+  padding-left: 12px; }
+  .prosCons li {
+    padding-left: 24px;
+    text-indent: -24px; }
+
+.pro:before, .con:before {
+  width: 24px;
+  text-align: center; }
+
+.pro:before {
+  font-size: 18px;
+  color: #339900; }
+
+.con:before {
+  font-size: 12px;
+  color: #CC3333; }
+
+.cssName {
+  font-family: monospace;
+  margin-top: 24px; }
+  .cssName:before {
+    content: "CSS name:";
+    font-family: "neuzeit_grotesk", Arial, Helvetica, sans-serif;
+    margin-right: 8px; }
 
 .demoButtons {
   position: relative;

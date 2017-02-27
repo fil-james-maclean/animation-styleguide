@@ -36,7 +36,7 @@ body{
 
 .demoContainer {
   float: left;
-  width: 220px;
+  width: 440px;
   margin: 12px;
   text-align: center;
   background: $grey3;
@@ -48,6 +48,58 @@ body{
   height: 100px;
   margin: auto;
   // border-radius: 50%;
+}
+
+.example, .discription {
+    float: left;
+    width: 50%;
+}
+
+.discription {
+  text-align: left;
+}
+$icon-list-width: 24px;
+.prosCons {
+  list-style: none;
+  padding-left: $icon-list-width/2;
+  li {
+    padding-left: $icon-list-width;
+    text-indent: -#{$icon-list-width};
+  }
+}
+
+
+.pro, .con {
+  &:before {
+    @extend %icon-font;
+    // float: left;
+    width: $icon-list-width;
+    // line-height: inherit;
+    text-align: center;
+  }
+}
+.pro {
+  &:before {
+    @extend %icon-tick-regular;
+    font-size: 18px;
+    color: $green1;
+  }
+}
+.con {
+  &:before {
+    @extend %icon-cross-bold;
+    font-size: 12px;
+    color: $red1;
+  }
+}
+.cssName {
+  font-family: monospace;
+  margin-top: 24px;
+  &:before {
+    content: "CSS name:";
+    font-family: $body-font-family;
+    margin-right: 8px;
+  }
 }
 .demoButtons {
   position: relative;

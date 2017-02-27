@@ -438,7 +438,7 @@ function exitToast() {
 function emphasisToast() {
     $( '.js-toast-target' ).removeClass(toastEnterClasses);
     $( '.js-toast-target' ).removeClass(toastExitClasses);
-    $( '.js-toast-target' ).addClass(toastEmphasisClasses);
+    $( '.js-toast-target' ).toggleClass(toastEmphasisClasses);
 
 }
 
