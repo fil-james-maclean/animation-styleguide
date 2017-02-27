@@ -191,7 +191,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translate3d(-30%, 0, 0);
+    transform: translate3d(30%, 0, 0);
   }
 
   to {
@@ -209,7 +209,7 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translate3d(30%, 0, 0);
+    transform: translate3d(-30%, 0, 0);
   }
 
   to {

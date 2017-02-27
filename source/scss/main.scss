@@ -61,6 +61,7 @@ body{
 $icon-list-width: 24px;
 .prosCons {
   list-style: none;
+  margin: 0;
   padding-left: $icon-list-width/2;
   li {
     padding-left: $icon-list-width;
@@ -99,6 +100,7 @@ $icon-list-width: 24px;
     content: "CSS name:";
     font-family: $body-font-family;
     margin-right: 8px;
+    float: left;
   }
 }
 .demoButtons {

@@ -2445,7 +2445,7 @@ p, .p {
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translate3d(-30%, 0, 0); }
+    transform: translate3d(30%, 0, 0); }
   to {
     opacity: 1;
     transform: none; } }
@@ -2458,7 +2458,7 @@ p, .p {
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translate3d(30%, 0, 0); }
+    transform: translate3d(-30%, 0, 0); }
   to {
     opacity: 1;
     transform: none; } }
@@ -3100,6 +3100,7 @@ body {
 
 .prosCons {
   list-style: none;
+  margin: 0;
   padding-left: 12px; }
   .prosCons li {
     padding-left: 24px;
@@ -3123,7 +3124,8 @@ body {
   .cssName:before {
     content: "CSS name:";
     font-family: "neuzeit_grotesk", Arial, Helvetica, sans-serif;
-    margin-right: 8px; }
+    margin-right: 8px;
+    float: left; }
 
 .demoButtons {
   position: relative;
