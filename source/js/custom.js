@@ -41,6 +41,18 @@ $( document ).on( 'click', '.js-fadeInScaleDown-trigger', function( e ) {
 } );
 
 
+$( document ).on( 'click', '.js-pulseIn-trigger', function( e ) {
+
+    $( '.js-pulseIn-target' ).each( function() {
+
+         $( this ).toggleClass( 'delay-100 dur-300 pulseIn is-hidden' );
+
+    } );
+
+    e.preventDefault();
+
+} );
+
 
 $( document ).on( 'click', '.js-fadeInUp-trigger', function( e ) {
 
@@ -161,6 +173,17 @@ $( document ).on( 'click', '.js-fadeOutScaleUp-trigger', function( e ) {
 
 } );
 
+$( document ).on( 'click', '.js-pulseOut-trigger', function( e ) {
+
+    $( '.js-pulseOut-target' ).each( function() {
+
+         $( this ).toggleClass( 'delay-100 dur-500 pulseOut is-hidden' );
+
+    } );
+
+    e.preventDefault();
+
+} );
 
 $( document ).on( 'click', '.js-fadeOutUp-trigger', function( e ) {
 

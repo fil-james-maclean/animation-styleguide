@@ -147,6 +147,29 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
    animation-timing-function: $easeout-back;
 }
 
+//pulse-in
+
+@keyframes pulseIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.4, 0.4, 1);
+  }
+  65% {
+    opacity: 1;
+    transform: scale3d(1.4, 1.4, 1);
+  }
+  to {
+    // opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulseIn {
+  animation-name: pulseIn;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
 // fadein-moveUp
 
 @keyframes fadeInUp {
@@ -331,6 +354,29 @@ $easeout-back:cubic-bezier(0.36, 0.51, 0.54, 1.16);
    animation-name: fadeOutScaleUp;
    animation-fill-mode: both;
    animation-timing-function: $easein-back;
+}
+
+//pulse-out
+
+@keyframes pulseOut {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  35% {
+    opacity: 1;
+    transform: scale3d(1.4, 1.4, 1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.4, 0.4, 1);
+  }
+}
+
+.pulseOut {
+  animation-name: pulseOut;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in;
 }
 
 @keyframes fadeOutUp {
