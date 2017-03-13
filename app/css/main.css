@@ -3079,12 +3079,20 @@ body {
   min-height: 100%; }
 
 .demoContainer {
-  float: left;
-  width: 440px;
-  margin: 12px;
   text-align: center;
   background: #F7F7F7;
-  border: 1px solid #BFBFBF; }
+  border-bottom: 1px solid #BFBFBF; }
+  .demoContainer:first-of-type {
+    border-top: 1px solid #BFBFBF; }
+
+@media (min-width: 1024px) {
+  .demoContainer {
+    float: left;
+    width: 568px;
+    margin: 12px;
+    text-align: center;
+    background: #F7F7F7;
+    border: 1px solid #BFBFBF; } }
 
 .demo-box {
   width: 100px;

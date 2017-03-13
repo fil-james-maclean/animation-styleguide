@@ -408,7 +408,7 @@ $( document ).on( 'click', '.js-modal-execute-trigger', function( e ) {
 
 
 /* Toast example */
-var toastEnterClasses = "delay-100 dur-500 fadeInRight js-toast__is-open"
+var toastEnterClasses = "delay-100 dur-500 fadeInLeft js-toast__is-open"
 var toastExitClasses = "is-hidden delay-100 dur-200 fadeOut js-toast__is-closed"
 var toastEmphasisClasses = "dur-800 shake js-toast__is-open"
 /*
