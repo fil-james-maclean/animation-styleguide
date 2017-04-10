@@ -34,6 +34,15 @@ body{
   min-height: 100%;
 }
 
+html.no-scroll,
+html.no-scroll body{
+  overflow: hidden !important;
+  height: 100% !important;
+
+}
+html.no-scroll {
+  overflow-y: scroll !important;
+}
 .demoContainer {
   // float: left;
   // width: 440px;
@@ -117,10 +126,17 @@ $icon-list-width: 24px;
     float: left;
   }
 }
+
+.max760 {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .demoButtons {
   position: relative;
   z-index: 30;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -496,6 +512,11 @@ $icon-list-width: 24px;
   top: 0;
   width: 100%;
 }
+.fixedBottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
 .demo-card-content,
 .demo-card-content--front, .demo-card-content--back {
@@ -521,14 +542,57 @@ $icon-list-width: 24px;
     // }
 }
 
+// .demo-card-content--shadow:before,
+// .demo-card-content--shadow:after {
+//     content: '';
+//     display: block;
+//     position: absolute;
+// }
+//
+// .demo-card-content--shadow:before {
+//     top: 0; left: 0;
+//     height: 100%; width: 100%;
+//     background: rgba($grey60,0.3);
+//     filter: blur(4px);
+// }
+// .demo-card-content--shadow:after {
+//     z-index: -1;
+//     top: 90%;
+//     left: 20%;
+//     height: 10%; width: 60%;
+//     background: rgba($grey60,0.3);
+//     filter: blur(40px);
+// }
+
+.demo-card-content--shadow__normal,
+.demo-card-content--shadow__animating {
+    display: block;
+    position: absolute;
+}
+
+.demo-card-content--shadow__normal {
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    background: rgba($grey60,0.3);
+    filter: blur(4px);
+}
+.demo-card-content--shadow__animating  {
+    top: 90%;
+    left: 20%;
+    height: 10%; width: 60%;
+    background: rgba($grey60,0.3);
+    filter: blur(40px);
+}
+
 .demo-card-content--front {
+  background: $white;
   border: 1px solid $grey15;
-  box-shadow: 0px 0px 4px 0px rgba($grey60,0.6);
+  // box-shadow: 0px 0px 4px 0px rgba($grey60,0.6);
 }
 .demo-card-content--back {
-  // background: blue;
+  background: $white;
   border: 1px solid $grey15;
-  box-shadow: 0px 0px 4px 0px rgba($grey60,0.6);
+  // box-shadow: 0px 0px 4px 0px rgba($grey60,0.6);
 }
 
 .demo-card-content--head {

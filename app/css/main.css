@@ -2875,8 +2875,18 @@ p, .p {
   position: absolute;
   transform: rotateX(-180deg) translateZ(100px); }
 
+.modal--wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  pointer-events: none; }
+
 .modal {
   padding: 0;
+  pointer-events: auto;
   outline: none;
   /**
 * @include breakpoint( small only ) {
@@ -3109,6 +3119,14 @@ body {
   position: relative;
   min-height: 100%; }
 
+html.no-scroll,
+html.no-scroll body {
+  overflow: hidden !important;
+  height: 100% !important; }
+
+html.no-scroll {
+  overflow-y: scroll !important; }
+
 .demoContainer {
   text-align: center;
   background: #F7F7F7;
@@ -3165,6 +3183,11 @@ body {
     font-family: "neuzeit_grotesk", Arial, Helvetica, sans-serif;
     margin-right: 8px;
     float: left; }
+
+.max760 {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .demoButtons {
   position: relative;
@@ -3454,6 +3477,11 @@ body {
   top: 0;
   width: 100%; }
 
+.fixedBottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+
 .demo-card-content,
 .demo-card-content--front, .demo-card-content--back {
   border-radius: 6px; }
@@ -3463,13 +3491,36 @@ body {
   max-width: 440px;
   height: 400px; }
 
+.demo-card-content--shadow__normal,
+.demo-card-content--shadow__animating {
+  display: block;
+  position: absolute; }
+
+.demo-card-content--shadow__normal {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(102, 102, 102, 0.3);
+  -webkit-filter: blur(4px);
+  filter: blur(4px); }
+
+.demo-card-content--shadow__animating {
+  top: 90%;
+  left: 20%;
+  height: 10%;
+  width: 60%;
+  background: rgba(102, 102, 102, 0.3);
+  -webkit-filter: blur(40px);
+  filter: blur(40px); }
+
 .demo-card-content--front {
-  border: 1px solid #D9D9D9;
-  box-shadow: 0px 0px 4px 0px rgba(102, 102, 102, 0.6); }
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9; }
 
 .demo-card-content--back {
-  border: 1px solid #D9D9D9;
-  box-shadow: 0px 0px 4px 0px rgba(102, 102, 102, 0.6); }
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9; }
 
 .demo-card-content--head {
   border-bottom: 1px solid #D9D9D9;
