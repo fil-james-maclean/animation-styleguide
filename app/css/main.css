@@ -3205,7 +3205,7 @@ html.no-scroll {
   background-color: rgba(38, 38, 38, 0.4); }
 
 .overlay__light {
-  background-color: rgba(255, 255, 255, 0.8); }
+  background-color: rgba(255, 255, 255, 0.95); }
 
 .demo-box-tooltip {
   position: relative;
@@ -3274,7 +3274,7 @@ html.no-scroll {
     transform: translate(0, -100%); }
   5%, 65% {
     transform: translate(0, 0%); }
-  75%, 95% {
+  80%, 90% {
     transform: translate(-50%, 0%); }
   to {
     transform: translate(-50%, -100%); } }
@@ -3282,7 +3282,7 @@ html.no-scroll {
 .loading-btn-medium.is-loading .loading-btn-medium--mask {
   animation-name: loading-btn-animation;
   animation-fill-mode: both;
-  animation-duration: 6000ms; }
+  animation-duration: 4000ms; }
 
 .loading-btn-medium.is-loading:hover {
   color: #006193; }

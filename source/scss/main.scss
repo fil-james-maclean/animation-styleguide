@@ -152,7 +152,7 @@ $icon-list-width: 24px;
 }
 
 .overlay__light {
-    background-color: rgba($white, 0.8);
+    background-color: rgba($white, 0.95);
 }
 
 
@@ -239,7 +239,7 @@ $icon-list-width: 24px;
   5%, 65% {
     transform: translate(0, 0%);
   }
-  75%, 95% {
+  80%, 90% {
     transform: translate(-50%, 0%);
   }
   to {
@@ -251,7 +251,7 @@ $icon-list-width: 24px;
    .loading-btn-medium--mask {
      animation-name: loading-btn-animation;
      animation-fill-mode: both;
-     animation-duration: 6000ms;
+     animation-duration: 4000ms;
    }
    &:hover {
      color: $blue1;
